@@ -4,13 +4,13 @@ body{
 }
 a{
     text-decoration: none;
-    color:rgb(212, 212, 212);
+    color:black;
 }
 #infooter{
     width:100%;
     height:290px;
     display: flex;
-    background-color:#212121 ;
+    /* background-color:#212121 ; */
 }
 
 #div1{
@@ -73,7 +73,7 @@ a{
     font-style: italic;
     line-height: 0%;
     font-family: Lato, sans-serif;
-    color:rgb(128, 128, 128);
+    color:black;
 }
 #copy{
     font-size: 10px;
@@ -91,6 +91,6 @@ a{
     justify-content: space-between;
 }
 #hiring{
-    background-color:#4daa0b ;
+    /* background-color:#4daa0b ; */
     /* line-height: 0%; */
 }
