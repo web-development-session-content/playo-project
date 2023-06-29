@@ -19,7 +19,7 @@
         
         <div id="logodiv" >
           <a href="index.html">
-            <img id="logo" src="https://playo-website.imgix.net/company/logo1.png?auto=compress,format" alt="playo logo" style="margin-top: 7px;">
+            <img id="logo" src="https://playo-website.gumlet.io/playo-website-v2/Logo+with+Trademark_Filled.png" alt="playo logo" style="margin-top: 7px;">
           </a>
          
         </div>
@@ -80,7 +80,7 @@
         <p class="timing"><img src="./images/clock.png" alt="" class="clockicon">ljljl</p>
         <p class="coaching">lsjdfljsd</p>
       </div> -->
-      <div id="infooter">
+      <!-- <div id="infooter">
         <div id="div1">
             <div id="weblogo">
                 <a href="index.html"><img src="https://playo-website.gumlet.net/logo/playo-logo-footer-website.png?auto=format,compress&h=100" alt="logo" width="100%" height="100%"></a>
@@ -125,90 +125,22 @@
             <a href="https://www.linkedin.com/company/playo"><p>LinkdIn</p></a>
         </div>
     </div>
-    </div>
+    </div> -->
+
+    <div id="footer"></div>
   </body>
 </html>
 
 
 
-<script  >
+<script  type="module">
+  import footer from "./components/footer.js"
+
+let container = document.querySelector("#footer");
+container.innerHTML = footer();
   
 
-  // for (let x in data) {
-  //   var cityx = data[x];
-  // }
-  // console.log(cityx);
 
-  // let con = document.getElementById("con");
-
-  // async function add(url) {
-  //   try {
-  //     var url = `http://127.0.0.1:5000/playo/cities`;
-  //     let response = await fetch(url, {
-  //       method: "GET",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //     });
-  //     let d = await response.json();
-  //     console.log("d:", d);
-  //     display(d);
-  //   } catch (err) {
-  //     console.log("err:", err);
-  //   }
-  // }
-
-
-  // display = (e) => {
-  //   //  console.log('e:', e)
-  //   e.forEach((el) => {
-  //     for (x in data) {
-  //       var c = data[x];
-  //     }
-
-  //     //   var div = document.getElementById("places");
-  //     //   // div.setAttribute("id","places")
-  //     //   var location= document.createElement("p");
-  //     //   location.innerText= el.location
-  //     //   let img= document.createElement("img")
-  //     //   img.src= el.image
-  //     //   img.setAttribute("id","conimage")
-
-  //     //   let timing= document.createElement("p")
-  //     //   timing.innerText=el.timing
-
-  //     // // console.log(el.timing)
-
-  //     //   var name = document.createElement("p");
-  //     //   name.innerText=el.name
-
-  //     //   Book= "BOOKABLE",
-  //     //   safe= "Safe & Hygiene"
-
-  //     if (el.city === c) {
-  //       let y = `  <div onclick="details(${el.id})" id= "places">
-  //       <div>
-  //         <img src="${el.image}" alt="" class="conimage">
-  //         <p class="imgtext">Coaching</p>
-  //       </div>
-  //       <p class="highlighttext">${el.name}</p>
-  //       <p class="location">${el.location}</p>
-  //       <p class="timing"><img src="./images/clock.png" alt="" class="clockicon">${el.timing}</p>
-  //       <p class="coaching">${el.name}  Coaching</p>
-  //     </div>`;
-
-  //       let place = document.getElementById("place");
-  //       place.setAttribute("class", "bold");
-  //       place.innerHTML = el.city;
-  //       con.innerHTML += y;
-  //     } else {
-  //       console.log("err");
-  //     }
-  //   });
-  // };
-
-
-  // add();
  
 
 
