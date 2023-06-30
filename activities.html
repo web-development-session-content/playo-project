@@ -54,21 +54,31 @@
 
 	document.querySelector("#typesearch").addEventListener("keyup",()=>{
 		let inp = document.querySelector("#typesearch").value
+		setCities(inp)	
+	})
+	let fetchCities = async () =>{
+		try{
+			let response = await fetch("https://sleepy-teddy-newt.cyclic.app/city_names")
+			let city_names = await response.json()
+		}catch(error){
+			console.log(error)
+		}
+	}
+	let setCities = (inp) =>{
 		let searchArr = city_names.filter((e)=>{
 			return e.toLowerCase().includes(inp.toLowerCase())
 		})
 		var showcities=document.querySelector("#citynames")
 		
-		if(searchArr.length==0) showcities.innerHTML = "<p>All citiies</p><hr>"
-		console.log(searchArr)
+		if(searchArr.length==0) showcities.innerHTML = "<p>No such city</p><hr>"
+		else if(searchArr.length == city_names.length) = "<p>All cities</p><hr>"
 		for(var i=0; i<searchArr.length; i++){
 			var p=document.createElement("p");
 			var line=document.createElement("hr");
 			p.innerHTML=searchArr[i];
 			showcities.append(p,line);
-		}	
-	})
-
+		}
+	}
 	//  popupstartshere-----------------------
 // var modal = document.getElementById("myModal");
 // var modal1=document.getElementById("myModal1")
@@ -159,7 +169,6 @@
 document.querySelector("#searchbtn").addEventListener("click",()=>{
     let data = {
       city: document.getElementById("typesearch").value,
-     
     };
 
     let location = localStorage.setItem("name", JSON.stringify(data));

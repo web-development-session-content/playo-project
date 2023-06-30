@@ -236,10 +236,7 @@
     async function searchLocation(){
         //Getting the value again
         var search_value = my_value.city;
-
-
        
-
         let response = await fetch("./database/activityData.json");
         let data = await response.json();
         //console.log(data);
