@@ -3,7 +3,7 @@ function navbar()
 {
 return `<div id="navbar">
         <div id="imgdiv">
-            <a href="index.html"><img src="https://playo-website.gumlet.net/logo/playo-logo-header-website.png?auto=compress,format&q=90" width="85%" height="60%"></a>
+            <a href="index.html"><img src="https://playo-website.gumlet.io/playo-website-v2/Logo+with+Trademark_Filled.png" width="85%" height="60%" style="margin-top: 7px;"></a>
         </div>
         <div id="tabsdiv">
             <a href="venues.html"><p>Book Venues</p></a>

@@ -14,7 +14,7 @@
     <div id="explorenavbar" style="height: 50px; margin-bottom: 50px;">
 		<div id="logodiv" >
 			<a href="index.html">
-				<img id="logo" src="https://playo-website.imgix.net/company/logo1.png?auto=compress,format" alt="playo logo" style="margin-top: 7px;">
+				<img id="logo" src="https://playo-website.gumlet.io/playo-website-v2/Logo+with+Trademark_Filled.png" alt="playo logo" style="margin-top: -2px;">
 			  </a>
 		</div>
 
@@ -30,7 +30,7 @@
 
 <!--  -->
         <div id="searchbar" style="margin-bottom: 25px;">
-            <input type="text" id="typesearch" placeholder="Type a city" style="border: 1px solid grey; border-top-left-radius: 2px; border-top-right-radius: 2px;">
+            <input type="text" id="typesearch" placeholder="Type a city"  style="border: 1px solid grey; border-top-left-radius: 2px; border-top-right-radius: 2px;" >
             <button id="searchbtn" >Detect</button>
         </div>
 
@@ -541,8 +541,20 @@ var  city_names=['Adilabad',
       city_names.sort((a,b)=>a-b);
       //console.log(city_names)
 
+	//   function D_Fun_C(data){
+	// 	data.map((({city})=>{
+	// 		var showcities=document.querySelector("#citynames");
+    //  var p=document.createElement("p");
+    //  var line=document.createElement("hr");
+    //      p.innerHTML=city;
+
+    //      showcities.append(p,line);
+	// 	})
+	//   }
+
+	
      for(var i=0; i<city_names.length; i++){
-        var showcities=document.querySelector("#citynames");
+		var showcities=document.querySelector("#citynames");
      var p=document.createElement("p");
      var line=document.createElement("hr");
          p.innerHTML=city_names[i];
@@ -649,7 +661,36 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
 
 
 
+// debouncing funvtion
 
+document.getElementById("typesearch").addEventListener("keyup",()=>{
+	debounce(mainFun);
+});
+
+let id;
+function debounce(func){
+    if(id){
+		clearTimeout(id);
+	}
+   id =	setTimeout(() => {
+		func();
+	},400)
+};
+
+
+const mainFun = async () => {
+	try{
+		let query = document.getElementById("typesearch").value;
+
+      let response = await fetch("");
+	  let data = await response.json();
+	  console.log(data);
+	  D_Fun_C(data);
+	}
+	catch(error){
+		console.log(error);
+	}
+}
 
 
 

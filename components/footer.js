@@ -7,14 +7,14 @@ function footer()
     return `<div id="infooter">
     <div id="div1">
         <div id="weblogo">
-            <a href="index.html"><img src="https://playo-website.gumlet.net/logo/playo-logo-footer-website.png?auto=format,compress&h=100" alt="logo" width="100%" height="100%"></a>
+            <a href="index.html"><img src="https://playo-website.gumlet.io/playo-website-v2/Logo+with+Trademark_Filled.png" alt="logo" width="100%" height="100%"></a>
         </div>
         <div id="playstore">
             <a href="https://play.google.com/store/apps/details?id=com.techmash.playo">
-                <img src="https://playo-website.gumlet.net/icons/download-android.png?auto=format,compress " >
+                <img src="https://www.freepnglogos.com/uploads/google-play-png-logo/new-get-it-on-google-play-png-logo-20.png "  height="100%" width="100%">
             </a>
             <a href="https://apps.apple.com/us/app/playo-local-sports-community/id1018786950?ls=1">
-                <img src="https://playo-website.gumlet.net/icons/download-ios.png?auto=format,compress" >
+                <img src="https://www.freepnglogos.com/uploads/app-store-logo-png/available-the-app-store-badge-vector-11.png" height="100%" width="100%">
             </a>
         </div>
         <div id="copyright">
@@ -43,10 +43,13 @@ function footer()
         <a href="faq.html"><p>FAQ's</p></a>
     </div>
     <div id="div4">
-        <a href="https://www.facebook.com/PlayoApp/"><p>Facebook</p></a>
-        <a href="https://twitter.com/playoApp"><p>Twitter</p></a>
-        <a href="https://www.instagram.com/playoapp/"><p>Instagram</p></a>
-        <a href="https://www.linkedin.com/company/playo"><p>LinkdIn</p></a>
+        <a href="https://www.facebook.com/PlayoApp/"><img src="https://playo-website.gumlet.io/playo-website-v2/static_pages/footer-facebook.png" ></a>
+        <br><br>
+        <a href="https://twitter.com/playoApp"><img src="https://playo-website.gumlet.io/playo-website-v2/static_pages/footer-twitter.png"></a>
+        <br><br>
+        <a href="https://www.instagram.com/playoapp/"><img src="https://playo-website.gumlet.io/playo-website-v2/static_pages/footer-instagram.png"></a>
+        <br><br>
+        <a href="https://www.linkedin.com/company/playo"><img src="https://playo-website.gumlet.io/playo-website-v2/static_pages/footer-linkedin.png"></a>
     </div>
 </div>`
 }
