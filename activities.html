@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <link rel="stylesheet" href="./css/explore.css">
-   <link rel="stylesheet" href="./css/popup.css">
-   <link rel="stylesheet" href="./styles/footer.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./styles/navbar.css">
+	<link rel="stylesheet" href="./styles/activity.css">
+	<link rel="stylesheet" href="./css/explore.css">
+	<link rel="stylesheet" href="./css/popup.css">
+	<link rel="stylesheet" href="./styles/footer.css">
 </head>
+
 <body>
-    <div id="explorenavbar" style="height: 50px; margin-bottom: 50px;">
-		<div id="logodiv" >
-			<a href="index.html">
-				<img id="logo" src="https://playo-website.gumlet.io/playo-website-v2/Logo+with+Trademark_Filled.png?auto=compress,format" alt="playo logo">
-			  </a>
-		</div>
+	<div id="explorenavbar" style="height: 50px; margin-bottom: 50px;">
 
-    </div>
+	</div>
 
 
 
-<!--    popupwindow      ------------------------------------------------------ -->
-<div id="show">
-    <!--popupwindow show here  -->
-</div>
-</div>
+	<!--    popupwindow      ------------------------------------------------------ -->
+	<div id="show">
+		<!--popupwindow show here  -->
+	</div>
+	</div>
 
-<!--  -->
-        <div id="searchbar" style="margin-bottom: 25px;">
-            <input type="text" id="typesearch" placeholder="Type a city" style="border: 1px solid grey; border-top-left-radius: 2px; border-top-right-radius: 2px;">
-            <button id="searchbtn" >Detect</button>
-        </div>
+	<!--  -->
+	<div id="searchbar" style="margin-bottom: 25px;">
+		<input type="text" id="typesearch" placeholder="Type a city"
+			style="border: 1px solid grey; border-top-left-radius: 2px; border-top-right-radius: 2px;">
+		<button id="searchbtn">Detect</button>
+	</div>
 
-     <div id="citynames" style="margin-bottom: 110px; border: 1px solid rgb(214, 212, 212); padding: 20px; box-sizing: border-box; border-radius: 2px; color: #424242;">
-     <p>All citiies</p>
-     <hr>
-        
-     </div>
+	<div id="citynames"
+		style="margin-bottom: 110px; border: 1px solid rgb(214, 212, 212); padding: 20px; box-sizing: border-box; border-radius: 2px; color: #424242;">
+		<p>All citiies</p>
+		<hr>
 
-	 <div id="footer"></div>
+	</div>
+
+	<div id="footer"></div>
 
 
 </body>
+
 </html>
 <script type="module">
+	import navbar from "./components/navbar.js"
+	document.getElementById("explorenavbar").innerHTML=navbar();
+
 	import getpopup from "./components/popup.js"
 	document.getElementById("show").innerHTML=getpopup();
 
 	import footer from "./components/footer.js"
-	let container = document.querySelector("#footer");
-	container.innerHTML = footer();
+	document.querySelector("#footer").innerHTML = footer()
 
 	window.onload = () =>{
 		document.querySelector("#typesearch").value = ""
@@ -59,15 +63,21 @@
 		let inp = document.querySelector("#typesearch").value
 		fetchCities(inp)
 	})
-	let fetchCities = async (inp) =>{
-		try{
-			let response = await fetch(`https://sleepy-teddy-newt.cyclic.app/city_names?city_like=${inp}`)
-			let searchArr = await response.json()
-			// console.log(searchArr)
-			setCities(searchArr)
-		}catch(error){
-			console.log(error)
-		}
+	let id;
+	let fetchCities = (inp) =>{
+		console.log("here")
+		if(id) clearTimeout(id)
+		id = setTimeout(async()=>{
+		console.log("here2")
+			try{
+				let response = await fetch(`https://sleepy-teddy-newt.cyclic.app/city_names?city_like=${inp}&_sort=city`)
+				let searchArr = await response.json()
+				// console.log(searchArr)
+				setCities(searchArr)
+			}catch(error){
+				console.log(error)
+			}
+		},1000)
 	}
 	let setCities = (searchArr) =>{
 		var showcities=document.querySelector("#citynames")
