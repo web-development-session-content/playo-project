@@ -52,30 +52,36 @@
 	let container = document.querySelector("#footer");
 	container.innerHTML = footer();
 
+	window.onload = () =>{
+		document.querySelector("#typesearch").value = ""
+	}
 	document.querySelector("#typesearch").addEventListener("keyup",()=>{
 		let inp = document.querySelector("#typesearch").value
-		setCities(inp)	
+		fetchCities(inp)
 	})
-	let fetchCities = async () =>{
+	let fetchCities = async (inp) =>{
 		try{
-			let response = await fetch("https://sleepy-teddy-newt.cyclic.app/city_names")
-			let city_names = await response.json()
+			let response = await fetch(`https://sleepy-teddy-newt.cyclic.app/city_names?city_like=${inp}`)
+			let searchArr = await response.json()
+			// console.log(searchArr)
+			setCities(searchArr)
 		}catch(error){
 			console.log(error)
 		}
 	}
-	let setCities = (inp) =>{
-		let searchArr = city_names.filter((e)=>{
-			return e.toLowerCase().includes(inp.toLowerCase())
-		})
+	let setCities = (searchArr) =>{
 		var showcities=document.querySelector("#citynames")
-		
 		if(searchArr.length==0) showcities.innerHTML = "<p>No such city</p><hr>"
-		else if(searchArr.length == city_names.length) = "<p>All cities</p><hr>"
+		else if(searchArr.length == 500) showcities.innerHTML = "<p>All cities</p><hr>"
+		else showcities.innerHTML = ""
 		for(var i=0; i<searchArr.length; i++){
+			let city = searchArr[i].city
 			var p=document.createElement("p");
 			var line=document.createElement("hr");
-			p.innerHTML=searchArr[i];
+			p.innerHTML= city;
+			p.addEventListener("click",()=>{
+				document.querySelector("#typesearch").value = city
+			})
 			showcities.append(p,line);
 		}
 	}
