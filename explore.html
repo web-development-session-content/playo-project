@@ -65,67 +65,15 @@
             <p class="filtertext">Categories</p>
             <select class="bold space1">
               <option value="Select Sports">All</option>
+              <option value="hyderabad">Cricket</option>
+              <option value="Swimming">Swimming</option>
+              <option value="Football">Football</option>
               </select>
           </div>
         </div>
       </div>
       <div id="con"></div>
-      <!-- <div id= "places">
-        <div>
-          <img src="https://playo-activities.gumlet.io/SVMBOWLINGALLEY/SVMBowlingAlleycover.jpg?q=40" alt="" class="conimage">
-          <p class="imgtext">Book</p>
-        </div>
-        <p class="highlighttext">shiva</p>
-        <p class="location">hyd</p>
-        <p class="timing"><img src="./images/clock.png" alt="" class="clockicon">ljljl</p>
-        <p class="coaching">lsjdfljsd</p>
-      </div> -->
-      <!-- <div id="infooter">
-        <div id="div1">
-            <div id="weblogo">
-                <a href="index.html"><img src="https://playo-website.gumlet.net/logo/playo-logo-footer-website.png?auto=format,compress&h=100" alt="logo" width="100%" height="100%"></a>
-            </div>
-            <div id="playstore">
-                <a href="https://play.google.com/store/apps/details?id=com.techmash.playo">
-                    <img src="https://playo-website.gumlet.net/icons/download-android.png?auto=format,compress " >
-                </a>
-                <a href="https://apps.apple.com/us/app/playo-local-sports-community/id1018786950?ls=1">
-                    <img src="https://playo-website.gumlet.net/icons/download-ios.png?auto=format,compress" >
-                </a>
-            </div>
-            <div id="copyright">
-                <p>©2022 TechMash Solutions Private Limited.<span> All Rights Reserved.</span></p>
-            </div>
-            <div id="loweritems">
-                <a href="faq.html"><p>FAQs</p></a>
-                <a href=""><p>Privacy POlicy</p></a>
-                <a href=""><p>Terms Of Service</p></a>
-                <a href=""><p>Cancellation & Refund Policy</p></a>
-                <a href=""><p>Careers</p></a>
-                <a href=""><p id="hiring">We're Hiring!</p></a>
-            </div>
-        </div>
-        <div id="div2">
-            <a href="about.html"><p>About Us</p></a>
-            <a href="partner.html"><p>Partner With Us</p></a>
-            <a href="brandact.html"><p>Brand Activations</p></a>
-            <a href="corporate.html"><p>Corporate Offerings</p></a>
-            <a href="contact.html"><p>contact Us</p></a>
-        </div>
-        <div id="div3">
-            <a href="venues.html"><p>Book Venues</p></a>
-            <a href="activities.html"><p>Activities</p></a>
-            <a href="blog.html"><p>Blog</p></a>
-            <a href="faq.html"><p>FAQ's</p></a>
-        </div>
-        <div id="div4">
-            <a href="https://www.facebook.com/PlayoApp/"><p>Facebook</p></a>
-            <a href="https://twitter.com/playoApp"><p>Twitter</p></a>
-            <a href="https://www.instagram.com/playoapp/"><p>Instagram</p></a>
-            <a href="https://www.linkedin.com/company/playo"><p>LinkdIn</p></a>
-        </div>
-    </div>
-    </div> -->
+
 
     <div id="footer"></div>
   </body>
@@ -141,8 +89,15 @@ container.innerHTML = footer();
   
 
 
- 
-
+let catfilter = document.getElementById("catfilter") 
+catfilter.addEventListener("change", function () {
+    let filtered = fetchData.filter(function (element) {
+      if (element.category === filter.value) {
+        return element;
+      }
+    });
+    apprndData(filtered);
+  });
 
 
 

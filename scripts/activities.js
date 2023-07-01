@@ -15,7 +15,7 @@ const Debounce = (fun) =>{
 const main = async () =>{
     try{
         let search = document.getElementById("typesearch").value
-        let res = await fetch(`https://zany-puce-dalmatian-fez.cyclic.app/cities?city=${search}`)
+        let res = await fetch(`https://puce-lazy-lemming.cyclic.app/cities?city=${search}`)
         let data = await res.json()
         console.log(data)
         displayData(data)
@@ -27,7 +27,7 @@ const main = async () =>{
 }
 
 function displayData(data){
-    // container.innerHTML ="";
+    
 
     data.map((ele)=>{
 
