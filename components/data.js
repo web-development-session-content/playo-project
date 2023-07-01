@@ -1,669 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <link rel="stylesheet" href="./css/explore.css">
-   <link rel="stylesheet" href="./css/popup.css">
-   <link rel="stylesheet" href="./css/">
-   <link rel="stylesheet" href="./styles/activity.css">
-   <link rel="stylesheet" href="./styles/footer.css">
-
-   
-</head>
-<body>
-    <div id="explorenavbar" style="height: 60px; margin-bottom: 50px;">
-		<div id="logodiv" >
-			<a href="index.html">
-				<img id="logo" src="https://playo.co/_next/image?url=https%3A%2F%2Fplayo-website.gumlet.io%2Fplayo-website-v2%2FLogo%2Bwith%2BTrademark_Filled.png%3Fq%3D20%26format%3Dauto&w=1920&q=75" alt="playo logo" style="margin-top: 3px;">
-			  </a>
-		</div>
-		<div id="nav2div" style="display: flex;"> 
-			<img id="pplogo" src="data:image/jpeg;base64,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" alt="">
-			<p id="myBtn" class="loginp">Login/Signup</p>
-			<img id="dropdownarrow" src="https://playo-website.gumlet.net/playo_functional/Icons/arrow_light.svg" alt="arrow">
-		</div>
-
-    </div>
-
-
-
-<!--    popupwindow      ------------------------------------------------------ -->
-<div id="show">
-    <!--popupwindow show here  -->
-</div>
-</div>
-
-<!--  -->
-
-        <div id="searchbar" style="margin-bottom: 25px;">
-            <input type="text" oninput="func()" id="typesearch" placeholder="Type a city" style="border: 1px solid grey; border-top-left-radius: 2px; border-top-right-radius: 2px;" >
-            <button id="searchbtn" onclick="func()" >Detect</button>
-        </div>
-	
-
-     
-		<div id="citynames" style="margin-bottom: 110px; border: 1px solid rgb(214, 212, 212); padding: 20px; box-sizing: border-box; border-radius: 2px; color: #424242;">
-     <p>All citiies</p>
-     <hr>
-       <div id="content"></div> 
-     </div>
-
-	 <div id="footer"></div>
-
-
-</body>
-</html>
-<script type="module">
-	import getpopup from "./components/popup.js"
-	import footer from "./components/footer.js"
-	
-	document.getElementById("show").innerHTML=getpopup();
-
-
-	let container = document.querySelector("#footer");
-	container.innerHTML = footer();
-
-
-/*var  city_names=['Adilabad',
-			'Anantapur',
-			'Chittoor',
-			'Kakinada',
-			'Guntur',
-			'Hyderabad',
-			'Karimnagar',
-			'Khammam',
-			'Krishna',
-			'Kurnool',
-			'Mahbubnagar',
-			'Medak',
-			'Nalgonda',
-			'Nizamabad',
-			'Ongole',
-			'Hyderabad',
-			'Srikakulam',
-			'Nellore',
-			'Visakhapatnam',
-			'Vizianagaram',
-			'Warangal',
-			'Eluru',
-			'Kadapa','Anjaw',
-			'Changlang',
-			'East Siang',
-			'Kurung Kumey',
-			'Lohit',
-			'Lower Dibang Valley',
-			'Lower Subansiri',
-			'Papum Pare',
-			'Tawang',
-			'Tirap',
-			'Dibang Valley',
-			'Upper Siang',
-			'Upper Subansiri',
-			'West Kameng',
-			'West Siang','Baksa',
-			'Barpeta',
-			'Bongaigaon',
-			'Cachar',
-			'Chirang',
-			'Darrang',
-			'Dhemaji',
-			'Dima Hasao',
-			'Dhubri',
-			'Dibrugarh',
-			'Goalpara',
-			'Golaghat',
-			'Hailakandi',
-			'Jorhat',
-			'Kamrup',
-			'Kamrup Metropolitan',
-			'Karbi Anglong',
-			'Karimganj',
-			'Kokrajhar',
-			'Lakhimpur',
-			'Marigaon',
-			'Nagaon',
-			'Nalbari',
-			'Sibsagar',
-			'Sonitpur',
-			'Tinsukia',
-			'Udalguri',
-			'Araria',
-			'Arwal',
-			'Aurangabad',
-			'Banka',
-			'Begusarai',
-			'Bhagalpur',
-			'Bhojpur',
-			'Buxar',
-			'Darbhanga',
-			'East Champaran',
-			'Gaya',
-			'Gopalganj',
-			'Jamui',
-			'Jehanabad',
-			'Kaimur',
-			'Katihar',
-			'Khagaria',
-			'Kishanganj',
-			'Lakhisarai',
-			'Madhepura',
-			'Madhubani',
-			'Munger',
-			'Muzaffarpur',
-			'Nalanda',
-			'Nawada',
-			'Patna',
-			'Purnia',
-			'Rohtas',
-			'Saharsa',
-			'Samastipur',
-			'Saran',
-			'Sheikhpura',
-			'Sheohar',
-			'Sitamarhi',
-			'Siwan',
-			'Supaul',
-			'Vaishali',
-			'West Champaran',
-			'Chandigarh','Bastar',
-			'Bijapur',
-			'Bilaspur',
-			'Dantewada',
-			'Dhamtari',
-			'Durg',
-			'Jashpur',
-			'Janjgir-Champa',
-			'Korba',
-			'Koriya',
-			'Kanker',
-			'Kabirdham (Kawardha)',
-			'Mahasamund',
-			'Narayanpur',
-			'Raigarh',
-			'Rajnandgaon',
-			'Raipur',
-			'Surguja','Dadra and Nagar Haveli',
-      'New Delhi','Ahmedabad',
-			'Amreli district',
-			'Anand',
-			'Banaskantha',
-			'Bharuch',
-			'Bhavnagar',
-			'Dahod',
-			'The Dangs',
-			'Gandhinagar',
-			'Jamnagar',
-			'Junagadh',
-			'Kutch',
-			'Kheda',
-			'Mehsana',
-			'Narmada',
-			'Navsari',
-			'Patan',
-			'Panchmahal',
-			'Porbandar',
-			'Rajkot',
-			'Sabarkantha',
-			'Surendranagar',
-			'Surat',
-			'Vyara',
-			'Vadodara',
-			'Valsad','Ambala',
-			'Bhiwani',
-			'Faridabad',
-			'Fatehabad',
-			'Gurgaon',
-			'Hissar',
-			'Jhajjar',
-			'Jind',
-			'Karnal',
-			'Kaithal',
-			'Kurukshetra',
-			'Mahendragarh',
-			'Mewat',
-			'Palwal',
-			'Panchkula',
-			'Panipat',
-			'Rewari',
-			'Rohtak',
-			'Sirsa',
-			'Sonipat',
-			'Yamuna Nagar','Bilaspur',
-			'Chamba',
-			'Hamirpur',
-			'Kangra',
-			'Kinnaur',
-			'Kullu',
-			'Lahaul and Spiti',
-			'Mandi',
-			'Shimla',
-			'Sirmaur',
-			'Solan',
-			'Una','Anantnag',
-			'Badgam',
-			'Bandipora',
-			'Baramulla',
-			'Doda',
-			'Ganderbal',
-			'Jammu',
-			'Kargil',
-			'Kathua',
-			'Kishtwar',
-			'Kupwara',
-			'Kulgam',
-			'Leh',
-			'Poonch',
-			'Pulwama',
-			'Rajauri',
-			'Ramban',
-			'Reasi',
-			'Samba',
-			'Shopian',
-			'Srinagar',
-			'Udhampur','Bokaro',
-			'Chatra',
-			'Deoghar',
-			'Dhanbad',
-			'Dumka',
-			'East Singhbhum',
-			'Garhwa',
-			'Giridih',
-			'Godda',
-			'Gumla',
-			'Hazaribag',
-			'Jamtara',
-			'Khunti',
-			'Koderma',
-			'Latehar',
-			'Lohardaga',
-			'Pakur',
-			'Palamu',
-			'Ramgarh',
-			'Ranchi',
-			'Sahibganj',
-			'Seraikela Kharsawan',
-			'Simdega',
-			'West Singhbhum','Bagalkot',
-			'Bangalore Rural',
-			'Bangalore Urban',
-			'Belgaum',
-			'Bellary',
-			'Bidar',
-			'Bijapur',
-			'Chamarajnagar',
-			'Chikkamagaluru',
-			'Chikkaballapur',
-			'Chitradurga',
-			'Davanagere',
-			'Dharwad',
-			'Dakshina Kannada',
-			'Gadag',
-			'Gulbarga',
-			'Hassan',
-			'Haveri district',
-			'Kodagu',
-			'Kolar',
-			'Koppal',
-			'Mandya',
-			'Mysore',
-			'Raichur',
-			'Shimoga',
-			'Tumkur',
-			'Udupi',
-			'Uttara Kannada',
-			'Ramanagara',
-			'Yadgir','Alappuzha',
-			'Ernakulam',
-			'Idukki',
-			'Kannur',
-			'Kasaragod',
-			'Kollam',
-			'Kottayam',
-			'Kozhikode',
-			'Malappuram',
-			'Palakkad',
-			'Pathanamthitta',
-			'Thrissur',
-			'Thiruvananthapuram',
-			'Wayanad','Alirajpur',
-			'Anuppur',
-			'Ashok Nagar',
-			'Balaghat',
-			'Barwani',
-			'Betul',
-			'Bhind',
-			'Bhopal',
-			'Burhanpur',
-			'Chhatarpur',
-			'Chhindwara',
-			'Damoh',
-			'Datia',
-			'Dewas',
-			'Dhar',
-			'Dindori',
-			'Guna',
-			'Gwalior',
-			'Harda',
-			'Hoshangabad',
-			'Indore',
-			'Jabalpur',
-			'Jhabua',
-			'Katni',
-			'Khandwa (East Nimar)',
-			'Khargone (West Nimar)',
-			'Mandla',
-			'Mandsaur',
-			'Morena',
-			'Narsinghpur',
-			'Neemuch',
-			'Panna',
-			'Rewa',
-			'Rajgarh',
-			'Ratlam',
-			'Raisen',
-			'Sagar',
-			'Satna',
-			'Sehore',
-			'Seoni',
-			'Shahdol',
-			'Shajapur',
-			'Sheopur',
-			'Shivpuri',
-			'Sidhi',
-			'Singrauli',
-			'Tikamgarh',
-			'Ujjain',
-			'Umaria',
-			'Vidisha','Ahmednagar',
-			'Akola',
-			'Amravati',
-			'Aurangabad',
-			'Bhandara',
-			'Beed',
-			'Buldhana',
-			'Chandrapur',
-			'Dhule',
-			'Gadchiroli',
-			'Gondia',
-			'Hingoli',
-			'Jalgaon',
-			'Jalna',
-			'Kolhapur',
-			'Latur',
-			'Mumbai City',
-			'Mumbai suburban',
-			'Nandurbar',
-			'Nanded',
-			'Nagpur',
-			'Nashik',
-			'Osmanabad',
-			'Parbhani',
-			'Pune',
-			'Raigad',
-			'Ratnagiri',
-			'Sindhudurg',
-			'Sangli',
-			'Solapur',
-			'Satara',
-			'Thane',
-			'Wardha',
-			'Washim',
-			'Yavatmal',
-			'Amritsar',
-			'Barnala',
-			'Bathinda',
-			'Firozpur',
-			'Faridkot',
-			'Fatehgarh Sahib',
-			'Fazilka',
-			'Gurdaspur',
-			'Hoshiarpur',
-			'Jalandhar',
-			'Kapurthala',
-			'Ludhiana',
-			'Mansa',
-			'Moga',
-			'Sri Muktsar Sahib',
-			'Pathankot',
-			'Patiala',
-			'Rupnagar',
-			'Ajitgarh (Mohali)',
-			'Sangrur',
-			'Nawanshahr',
-			'Tarn Taran','Ajmer',
-			'Alwar',
-			'Bikaner',
-			'Barmer',
-			'Banswara',
-			'Bharatpur',
-			'Baran',
-			'Bundi',
-			'Bhilwara',
-			'Churu',
-			'Chittorgarh',
-			'Dausa',
-			'Dholpur',
-			'Dungapur',
-			'Ganganagar',
-			'Hanumangarh',
-			'Jhunjhunu',
-			'Jalore',
-			'Jodhpur',
-			'Jaipur',
-			'Jaisalmer',
-			'Jhalawar',
-			'Karauli',
-			'Kota',
-			'Nagaur',
-			'Pali',
-			'Pratapgarh',
-			'Rajsamand',
-			'Sikar',
-			'Sawai Madhopur',
-			'Sirohi',
-			'Tonk',
-			'Udaipur','Agra',
-			'Allahabad',
-			'Aligarh',
-			'Ambedkar Nagar',
-			'Auraiya',
-			'Azamgarh',
-			'Barabanki',
-			'Budaun',
-			'Bagpat',
-			'Bahraich',
-			'Bijnor',
-			'Ballia',
-			'Banda',
-			'Balrampur',
-			'Bareilly',
-			'Basti',
-			'Bulandshahr',
-			'Chandauli',
-			'Chhatrapati Shahuji Maharaj Nagar',
-			'Chitrakoot',
-			'Deoria',
-			'Etah',
-			'Kanshi Ram Nagar',
-			'Etawah',
-			'Firozabad',
-			'Farrukhabad',
-			'Fatehpur',
-			'Faizabad',
-			'Gautam Buddh Nagar',
-			'Gonda',
-			'Ghazipur',
-			'Gorakhpur',
-			'Ghaziabad',
-			'Hamirpur',
-			'Hardoi',
-			'Mahamaya Nagar',
-			'Jhansi',
-			'Jalaun',
-			'Jyotiba Phule Nagar',
-			'Jaunpur district',
-			'Ramabai Nagar (Kanpur Dehat)',
-			'Kannauj',
-			'Kanpur',
-			'Kaushambi',
-			'Kushinagar',
-			'Lalitpur',
-			'Lakhimpur Kheri',
-			'Lucknow',
-			'Mau',
-			'Meerut',
-			'Maharajganj',
-			'Mahoba',
-			'Mirzapur',
-			'Moradabad',
-			'Mainpuri',
-			'Mathura',
-			'Muzaffarnagar',
-			'Panchsheel Nagar district (Hapur)',
-			'Pilibhit',
-			'Shamli',
-			'Pratapgarh',
-			'Rampur',
-			'Raebareli',
-			'Saharanpur',
-			'Sitapur',
-			'Shahjahanpur',
-			'Sant Kabir Nagar',
-			'Siddharthnagar',
-			'Sonbhadra',
-			'Sant Ravidas Nagar',
-			'Sultanpur',
-			'Shravasti',
-			'Unnao',
-			'Varanasi','Almora',
-			'Bageshwar',
-			'Chamoli',
-			'Champawat',
-			'Dehradun',
-			'Haridwar',
-			'Nainital',
-			'Pauri Garhwal',
-			'Pithoragarh',
-			'Rudraprayag',
-			'Tehri Garhwal',
-			'Udham Singh Nagar',
-			'Uttarkashi'];
-      city_names.sort((a,b)=>a-b);
-      console.log(city_names)
-
-     for(var i=0; i<city_names.length; i++){
-        var showcities=document.querySelector("#citynames");
-     var p=document.createElement("p");
-     var line=document.createElement("hr");
-         p.innerHTML=city_names[i];
-         showcities.append(p,line);
-     }
-
-	//popupstartshere-----------------------
-var modal = document.getElementById("myModal");
-var modal1=document.getElementById("myModal1")
-
-//Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-btn.innerHTML= JSON.parse(localStorage.getItem("myLocal"))[0]|| "Login/Signup";
-var submit=document.getElementById("btn");
-var verify=document.getElementById("btn2")
-
-//Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-//When the user clicks the button, open the modal 
-btn.onclick = function() {
-	if (btn.innerHTML=="Login/Signup"){
-		modal.style.display = "block";
-	}
-	else{
-		document.getElementById("dropdowndiv").style.visibility="visible";
-	}
-  
-
-}
-
-
-
-submit.onclick=function(){
-    var mobnumber=document.querySelector("#mobnum").value;
-    console.log(mobnumber)
- if(mobnumber){
-    modal.style.display = "none";
-    modal1.style.display = "block";
- }
- else{
-     alert("pls fill no.");
- }
-}
-verify.onclick = function(event) {
-    event.preventDefault()
-  var data=JSON.parse(localStorage.getItem("myLocal"))
-  console.log(data[0]);
-  btn.innerHTML=data[0]
-  modal.style.display = "none";
-  modal1.style.display = "none";
-
-}
-
-//When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal1.style.display = "none";
-  modal.style.display = "none";
- 
-}
-
-//When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    
-  }
-}
-
-document.getElementById("form").addEventListener("submit",myFn)
-  var arr=JSON.parse(localStorage.getItem("myLocal"))||[]
-
-function myFn(event)
-{var arr=[];
-event.preventDefault()
-var myobj=document.querySelector("#mobnum").value;
-arr.push(myobj)
-localStorage.setItem("myLocal",JSON.stringify(arr))
-}
-
-function find() {
-    let c= document.getElementById("cities").value
-    console.log(c)
-    
-    let data = {
-      city: document.getElementById("typesearch").value,
-     
-    };
-
-    let location = localStorage.setItem("name", JSON.stringify(data));
-    window.location.href = "explore.html";
-  }
-
-
-document.querySelector("#searchbtn").addEventListener("click",()=>{
-    let data = {
-      city: document.getElementById("typesearch").value,
-     
-    };
-
-    let location = localStorage.setItem("name", JSON.stringify(data));
-    window.location.href = "explore.html";*/
-	</script>
-<script>
-
-
-	/*const sportsAcademies = [
+const sportsAcademies = [
     {
       city: "hyderabad",
+      sport:"cricket",
       name: "Daniel Cricket Academy",
       location: "hyderabad",
       image: "https://playo-activities.gumlet.io/DANIELSCRICKETACADEMY/DanielsCricketAcademycover1502371285385.jpg?q=40",
@@ -677,6 +15,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
     {
       city: "hyderabad",
       name: "SVM Bowling Alley Gachibowli",
+      sport:"bowling",
       location: "36/A, Sai Tirumala Platinum Building, Old Mumbai Hwy, Telecom Nagar Extension",
       image: "https://playo-activities.gumlet.io/SVMBOWLINGALLEY/SVMBowlingAlleycover.jpg?q=40",
       timing: "All Days | 10 AM - 10 PM",
@@ -690,6 +29,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       city: "hyderabad",
       name: "CHETAN ANAND BADMINTON ACADEMY",
       location: "Madhapur",
+      sport:"badminton",
       image: "https://playo-activities.gumlet.io/CHETANANANDBADMINTONACADEMY/ChetanAnandBadmintonAcademycover1502367127642.jpg?q=40",
       timing: "Morning 5 AM - 7 AM, Evening 4 PM - 6 PM",
       id: 3,
@@ -702,6 +42,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       city: "hyderabad",
       name: "PRAXIS SWIMMING",
       location: "Narayanguda",
+      sport:"swimming",
       image: "https://playo-activities.gumlet.io/PRAXISSWIMMING/PraxisSwimmingcover1502369476989.jpg?q=40",
       timing: "6 AM - 10 AM, 4 PM - 9 PM (Tuesday - Sunday)",
       id: 4,
@@ -714,6 +55,8 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       city: "hyderabad",
       name: "INSPORTS CRICKET ACADEMY",
       location: "Banjara Hills",
+      sport:"cricket",
+
       image: "https://playo-activities.gumlet.io/INSPORTSCRICKETACADEMY/InsportsCricketAcademycover1502366698506.jpg?q=40",
       timing: "6 AM - 8 AM, 4 PM - 8 PM",
       id: 5,
@@ -725,6 +68,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
     {
       city: "hyderabad",
       name: "ST. JOHNS CRICKET ACADEMY",
+      sport:"cricket",
       location: "East Marredpally",
       timing: "Morning & Evening sessions",
       id: 6,
@@ -735,6 +79,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
     {
         city: "delhi",
         name: "SEHWAG CRICKET ACADEMY",
+        sport:"cricket",
         location: "X-12, Hauz Khas Road, Hauz Khas Main Market, New Delhi, Delhi 110016",
         image: "https://playo-activities.gumlet.io/SEHWAGCRICKETACADEMY/SehwagCricketAcademycover1509335108795.jpg?q=40",
         timing: "Morning and Evening Session",
@@ -749,6 +94,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "delhi",
         name: "MADAN LAL CRICKET ACADEMY",
+        sport:"cricket",
         location: "DDA Siri Fort Sports Complex, August Kranti Marg, Khelgaon, Behind Siri Fort Auditorium, New Delhi, Delhi 110049",
         image: "https://playo-activities.gumlet.io/GYANTICRICKETCOACHING/GyantiCricketCoachingcover1509432145244.jpg?q=40",
         timing: "Morning and Evening session",
@@ -763,6 +109,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "delhi",
         name: "HARBEER CRICKET ACADEMY",
+        sport:"cricket",
         location: "Opp.Japanese Park, Sector 9, Rohini west, Delhi, 110085",
         image: "https://playo-activities.gumlet.io/HARBEERCRICKETACADEMY/HarbeerCricketAcademycover1509431328272.jpg?q=40",
         timing: "Morning and Evening session",
@@ -770,6 +117,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
         overview: "Neo Convent School functions with an exalted aim of providing excellent education opportunities to the students irrespective of caste, creed or religion. Its motto “Knowledge Thy Wealth” explains all that the school stands for. The initiative to further the cause of education through this school was taken by “Neo Gursikh Education Society”. The aforesaid registered Society with the Managing Committee looks after and controls the activities of the school. The School was recognized by Delhi Administration and by M.C.D in 1976. Upgradation for Senior Secondary stage was granted by Delhi Administration in 1992. The school is affiliated with CBSE up to Senior Secondary level. Currently, affiliation is granted till 2018. The aim of the school is to create an academic and physical environment of a nature, which helps the children to become ideal members of society develop skills and knowledge which is the envy of all and lastly, have a disciplined character embodied with the spiritual values of our Gurus.",
         goals: "",
         services: "",
+        image3: "https://playo-activities.gumlet.io/EXTRATIMEFOOTBALLACADEMY/ExtraTimeFootballAcademyIMG0.PNG",
         infrastructure: "",
         address: "Opp.Japanese Park, Sector 9, Rohini west, Delhi, 110085",
         id: 13
@@ -777,6 +125,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "delhi",
         name: "EXTRA TIME FOOTBALL ACADEMY",
+        sport:"football",
         location: "Vasant Vatika, Opposite DPS Vasant Kunj, New Delhi, Delhi 110070",
         image: "https://playo-activities.gumlet.io/EXTRATIMEFOOTBALLACADEMY/ExtraTimeFootballAcademycover1509432907532.jpg?q=40",
         timing: "Morning and Evening session",
@@ -791,6 +140,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "delhi",
         name: "FCBESCOLA FOOTBALL SCHOOL - WEST DELHI",
+        sport:"football",
         location: "Shivaji College Sports Complex iOS Maidan, Shivaji Enclave, Tagore Garden Extension, New Delhi, Delhi 110018",
         image: "https://playo-activities.gumlet.io/FCBESCOLAFOOTBALLSCHOOL-WESTDELHI/FCBEscolaFootballSchoolWestDelhicover1509433782873.jpg?q=40",
         timing: "Morning and Evening session",
@@ -805,6 +155,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "delhi",
         name: "PHOENIX FOOTBALL ACADEMY",
+        sport:"football",
         location: "DDA Sports Complex, Muni Maya Ram Jain Marg, Pitampura, Delhi, 110034",
         image: "https://playo-activities.gumlet.io/PHOENIXFOOTBALLACADEMY/PhoenixFootballAcademycover1509435605936.jpg?q=40",
         timing: "Morning and Evening session",
@@ -819,6 +170,8 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "pune",
         name: "TWENTY2YARDS CRICKET ACADEMY",
+        sport:"cricket",
+        image:"https://playo-activities.gumlet.io/PHOENIXFOOTBALLACADEMY/PhoenixFootballAcademyIMG0.PNG",
         location: "R.No. 52/C, Dagade-Patil Nagar, Opp. Pinnacle Brookside, Mumbai-Bangalore Bypass Highway, Bavdhan Khurd, Pune, Maharashtra 411021",
         timing: "Morning and evening session",
         overview: "Twenty2yards is a specialized cricket academy...",
@@ -828,6 +181,8 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "pune",
         name: "ARYANS CRICKET ACADEMY",
+        sport:"cricket",
+        image: "https://playo-activities.gumlet.io/MADANLALCRICKETACADEMY/MadanLalCricketAcademyIMG0.PNG",
         location: "Mulberry Gardens, Opp Laxmi Lawns, Magarpatta City, Hadapsar, Pune, Maharashtra 411028",
         timing: "Morning and evening session",
         overview: "At Aryans Cricket Academy, we have been coaching budding cricketers...",
@@ -836,7 +191,9 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       },
       {
         city: "pune",
+        image: "https://playo-activities.gumlet.io/DANIELSCRICKETACADEMY/DanielsCricketAcademyIMG0.jpg",
         name: "SPORTS GALAXY TILEKAR SPORTS ACADEMY",
+        sport:"cricket",
         location: "Mulberry Gardens, Opp Laxmi Lawns, Magarpatta City, Hadapsar, Pune, Maharashtra 411028",
         timing: "Morning and evening session",
         overview: "From the passion of sports 'Sports Galaxy' has emerge and established in 2015...",
@@ -846,6 +203,8 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "pune",
         name: "PYC HINDU GYMKHANA",
+        sport:"cricket",
+        image: "https://playo-activities.gumlet.io/DANIELSCRICKETACADEMY/DanielsCricketAcademyIMG0.jpg",
         location: "CTS No. 766, F.P. No. 244, Bhandarkar Road, Pune, Maharashtra 411004",
         timing: "Morning and evening session",
         overview: "It all started in the year 1900, when a few young and enthusiastic cricketers formed ‘Poona Young Cricketers’ Hindu Gymkhana’...",
@@ -854,6 +213,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       },
       {
         city: "pune",
+        sport:"cricket",
         name: "SANJAY SPORTS ACADEMY",
         location: "19/1b/1, Near Hotel Rajwada, Baner Road, Someshwarwadi, Pune, Maharashtra 411008",
         timing: "Morning and Evening session",
@@ -864,6 +224,8 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "pune",
         name: "SILVER SPORTS CLUB",
+        sport:"cricket",
+        image: "https://playo-activities.gumlet.io/DANIELSCRICKETACADEMY/DanielsCricketAcademyIMG0.jpg",
         location: "165/1, 166/5, Near by Mumbai-Bangalore Highway, Behind Vedanta Society, Wakad, Shankar Kalat Nagar, Wakad, Pune, Maharashtra 411057",
         timing: "Morning and evening session",
         overview: "Silver Club came into existence to develop sports and games in India...",
@@ -874,6 +236,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
         city: "mumbai",
         name: "SANJEEVANI CRICKET ACADEMY",
         location: "Bandra East",
+        sport:"cricket",
         image: "https://playo-activities.gumlet.io/SANJEEVANICRICKETACADEMY/SanjeevaniCricketAcademycover1508259425818.jpg?q=40",
         timing: "Morning session",
         overview: "Sanjeevani Cricket Academy is a premier cricket academy located in Bandra East, Mumbai...",
@@ -883,6 +246,8 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "mumbai",
         name: "DHAWAN CRICKET ACADEMY",
+        sport:"cricket",
+        image: "https://playo-activities.gumlet.io/MADANLALCRICKETACADEMY/MadanLalCricketAcademyIMG0.PNG",
         location: "Pali Hill, Bandra West, Mumbai, Maharashtra 400050",
         timing: "Morning and evening session",
         overview: "Dhawan Cricket Academy is one of the well-known cricket academies in Mumbai...",
@@ -891,6 +256,8 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       },
       {
         city: "mumbai",
+        sport:"cricket",
+        image: "https://playo-activities.gumlet.io/DANIELSCRICKETACADEMY/DanielsCricketAcademyIMG0.jpg",
         name: "BHATKAR CRICKET ACADEMY",
         location: "Khalsa College, Guru Nanak Khalsa College, Mumbai, Maharashtra 400019",
         timing: "Morning and evening session",
@@ -901,6 +268,9 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "mumbai",
         name: "Vengsarkar Cricket Academy",
+        sport:"cricket",
+        image: "https://playo-activities.gumlet.io/MADANLALCRICKETACADEMY/MadanLalCricketAcademyIMG0.PNG",
+        image: "https://playo-activities.gumlet.io/CALCUTTACRICKETACADEMY/CalcuttaCricketAcademyIMG0.PNG",
         location: "DLH Junction, CTS No. 911 & 912, SV Road, Goregaon West, Mumbai, Maharashtra 400062",
         timing: "Morning and evening session",
         overview: "Vengsarkar Cricket Academy is a renowned cricket coaching center in Mumbai...",
@@ -910,6 +280,8 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "mumbai",
         name: "Andheri Cricket Academy",
+        sport:"cricket",
+        image: "https://playo-activities.gumlet.io/CALCUTTACRICKETACADEMY/CalcuttaCricketAcademyIMG0.PNG",
         location: "Veera Desai Road, Andheri West, Mumbai, Maharashtra 400058",
         timing: "Morning and evening session",
         overview: "Andheri Cricket Academy is a popular cricket training academy in Mumbai...",
@@ -919,8 +291,10 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "mumbai",
         name: "Global Cricket School",
+        sport:"cricket",
         location: "Gurukul Rd, Malad East, Mumbai, Maharashtra 400097",
         timing: "Morning and evening session",
+        image: "https://playo-activities.gumlet.io/FOOTBALLTOURNAMENT/FootballTournamentIMG0.jpg",
         overview: "Global Cricket School is a leading cricket academy in Mumbai...",
         address: "Gurukul Rd, Malad East, Mumbai, Maharashtra 400097",
         id: 28
@@ -928,6 +302,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "kolkata",
         name: "FOOTBALL TOURNAMENT",
+        sport:"football",
         location: "Indian Statistical Institute, 205 B.T. Road, Kolkata, West Bengal, India",
         image: "https://playo-activities.gumlet.io/FOOTBALLTOURNAMENT/FootballTournamentcover.PNG?q=40",
         timing: "11th March-19th March, 2017 | 9:00 A.M. - 7:00 P.M.",
@@ -942,6 +317,7 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
       {
         city: "kolkata",
         name: "CALCUTTA CRICKET ACADEMY",
+        sport:"cricket",
         location: "Southern Ave, Lake Gardens, Vivekananda Park (est) Ground, Hemanta Mukherjee Sarani, lake Terrace, Ballygunge, Kolkata, West Bengal 700029",
         image: "https://playo-activities.gumlet.io/GULLYCRICKET/GullyCricketcover.PNG?q=40",
         timing: "Morning and Evening session",
@@ -953,538 +329,6 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
         address: "",
         id: 30
       }   
-  ];*/
+  ];
 
-
-  const  city_names=['Adilabad',
-			'Anantapur',
-			'Chittoor',
-			'Kakinada',
-			'Guntur',
-			'Hyderabad',
-			'Karimnagar',
-			'Khammam',
-			'Krishna',
-			'Kurnool',
-			'Mahbubnagar',
-			'Medak',
-			'Nalgonda',
-			'Nizamabad',
-			'Ongole',
-			'Hyderabad',
-			'Srikakulam',
-			'Nellore',
-			'Visakhapatnam',
-			'Vizianagaram',
-			'Warangal',
-			'Eluru',
-			'Kadapa','Anjaw',
-			'Changlang',
-			'East Siang',
-			'Kurung Kumey',
-			'Lohit',
-			'Lower Dibang Valley',
-			'Lower Subansiri',
-			'Papum Pare',
-			'Tawang',
-			'Tirap',
-			'Dibang Valley',
-			'Upper Siang',
-			'Upper Subansiri',
-			'West Kameng',
-			'West Siang','Baksa',
-			'Barpeta',
-			'Bongaigaon',
-			'Cachar',
-			'Chirang',
-			'Darrang',
-			'Dhemaji',
-			'Dima Hasao',
-			'Dhubri',
-			'Dibrugarh',
-			'Goalpara',
-			'Golaghat',
-			'Hailakandi',
-			'Jorhat',
-			'Kamrup',
-			'Kamrup Metropolitan',
-			'Karbi Anglong',
-			'Karimganj',
-			'Kokrajhar',
-			'Lakhimpur',
-			'Marigaon',
-			'Nagaon',
-			'Nalbari',
-			'Sibsagar',
-			'Sonitpur',
-			'Tinsukia',
-			'Udalguri',
-			'Araria',
-			'Arwal',
-			'Aurangabad',
-			'Banka',
-			'Begusarai',
-			'Bhagalpur',
-			'Bhojpur',
-			'Buxar',
-			'Darbhanga',
-			'East Champaran',
-			'Gaya',
-			'Gopalganj',
-			'Jamui',
-			'Jehanabad',
-			'Kaimur',
-			'Katihar',
-			'Khagaria',
-			'Kishanganj',
-			'Lakhisarai',
-			'Madhepura',
-			'Madhubani',
-			'Munger',
-			'Muzaffarpur',
-			'Nalanda',
-			'Nawada',
-			'Patna',
-			'Purnia',
-			'Rohtas',
-			'Saharsa',
-			'Samastipur',
-			'Saran',
-			'Sheikhpura',
-			'Sheohar',
-			'Sitamarhi',
-			'Siwan',
-			'Supaul',
-			'Vaishali',
-			'West Champaran',
-			'Chandigarh','Bastar',
-			'Bijapur',
-			'Bilaspur',
-			'Dantewada',
-			'Dhamtari',
-			'Durg',
-			'Jashpur',
-			'Janjgir-Champa',
-			'Korba',
-			'Koriya',
-			'Kanker',
-			'Kabirdham (Kawardha)',
-			'Mahasamund',
-			'Narayanpur',
-			'Raigarh',
-			'Rajnandgaon',
-			'Raipur',
-			'Surguja','Dadra and Nagar Haveli',
-      'New Delhi','Ahmedabad',
-			'Amreli district',
-			'Anand',
-			'Banaskantha',
-			'Bharuch',
-			'Bhavnagar',
-			'Dahod',
-			'The Dangs',
-			'Gandhinagar',
-			'Jamnagar',
-			'Junagadh',
-			'Kutch',
-			'Kheda',
-			'Mehsana',
-			'Narmada',
-			'Navsari',
-			'Patan',
-			'Panchmahal',
-			'Porbandar',
-			'Rajkot',
-			'Sabarkantha',
-			'Surendranagar',
-			'Surat',
-			'Vyara',
-			'Vadodara',
-			'Valsad','Ambala',
-			'Bhiwani',
-			'Faridabad',
-			'Fatehabad',
-			'Gurgaon',
-			'Hissar',
-			'Jhajjar',
-			'Jind',
-			'Karnal',
-			'Kaithal',
-			'Kurukshetra',
-			'Mahendragarh',
-			'Mewat',
-			'Palwal',
-			'Panchkula',
-			'Panipat',
-			'Rewari',
-			'Rohtak',
-			'Sirsa',
-			'Sonipat',
-			'Yamuna Nagar','Bilaspur',
-			'Chamba',
-			'Hamirpur',
-			'Kangra',
-			'Kinnaur',
-			'Kullu',
-			'Lahaul and Spiti',
-			'Mandi',
-			'Shimla',
-			'Sirmaur',
-			'Solan',
-			'Una','Anantnag',
-			'Badgam',
-			'Bandipora',
-			'Baramulla',
-			'Doda',
-			'Ganderbal',
-			'Jammu',
-			'Kargil',
-			'Kathua',
-			'Kishtwar',
-			'Kupwara',
-			'Kulgam',
-			'Leh',
-			'Poonch',
-			'Pulwama',
-			'Rajauri',
-			'Ramban',
-			'Reasi',
-			'Samba',
-			'Shopian',
-			'Srinagar',
-			'Udhampur','Bokaro',
-			'Chatra',
-			'Deoghar',
-			'Dhanbad',
-			'Dumka',
-			'East Singhbhum',
-			'Garhwa',
-			'Giridih',
-			'Godda',
-			'Gumla',
-			'Hazaribag',
-			'Jamtara',
-			'Khunti',
-			'Koderma',
-			'Latehar',
-			'Lohardaga',
-			'Pakur',
-			'Palamu',
-			'Ramgarh',
-			'Ranchi',
-			'Sahibganj',
-			'Seraikela Kharsawan',
-			'Simdega',
-			'West Singhbhum','Bagalkot',
-			'Bangalore Rural',
-			'Bangalore Urban',
-			'Belgaum',
-			'Bellary',
-			'Bidar',
-			'Bijapur',
-			'Chamarajnagar',
-			'Chikkamagaluru',
-			'Chikkaballapur',
-			'Chitradurga',
-			'Davanagere',
-			'Dharwad',
-			'Dakshina Kannada',
-			'Gadag',
-			'Gulbarga',
-			'Hassan',
-			'Haveri district',
-			'Kodagu',
-			'Kolar',
-			'Koppal',
-			'Mandya',
-			'Mysore',
-			'Raichur',
-			'Shimoga',
-			'Tumkur',
-			'Udupi',
-			'Uttara Kannada',
-			'Ramanagara',
-			'Yadgir','Alappuzha',
-			'Ernakulam',
-			'Idukki',
-			'Kannur',
-			'Kasaragod',
-			'Kollam',
-			'Kottayam',
-			'Kozhikode',
-			'Malappuram',
-			'Palakkad',
-			'Pathanamthitta',
-			'Thrissur',
-			'Thiruvananthapuram',
-			'Wayanad','Alirajpur',
-			'Anuppur',
-			'Ashok Nagar',
-			'Balaghat',
-			'Barwani',
-			'Betul',
-			'Bhind',
-			'Bhopal',
-			'Burhanpur',
-			'Chhatarpur',
-			'Chhindwara',
-			'Damoh',
-			'Datia',
-			'Dewas',
-			'Dhar',
-			'Dindori',
-			'Guna',
-			'Gwalior',
-			'Harda',
-			'Hoshangabad',
-			'Indore',
-			'Jabalpur',
-			'Jhabua',
-			'Katni',
-			'Khandwa (East Nimar)',
-			'Khargone (West Nimar)',
-			'Mandla',
-			'Mandsaur',
-			'Morena',
-			'Narsinghpur',
-			'Neemuch',
-			'Panna',
-			'Rewa',
-			'Rajgarh',
-			'Ratlam',
-			'Raisen',
-			'Sagar',
-			'Satna',
-			'Sehore',
-			'Seoni',
-			'Shahdol',
-			'Shajapur',
-			'Sheopur',
-			'Shivpuri',
-			'Sidhi',
-			'Singrauli',
-			'Tikamgarh',
-			'Ujjain',
-			'Umaria',
-			'Vidisha','Ahmednagar',
-			'Akola',
-			'Amravati',
-			'Aurangabad',
-			'Bhandara',
-			'Beed',
-			'Buldhana',
-			'Chandrapur',
-			'Dhule',
-			'Gadchiroli',
-			'Gondia',
-			'Hingoli',
-			'Jalgaon',
-			'Jalna',
-			'Kolhapur',
-			'Latur',
-			'Mumbai City',
-			'Mumbai suburban',
-			'Nandurbar',
-			'Nanded',
-			'Nagpur',
-			'Nashik',
-			'Osmanabad',
-			'Parbhani',
-			'Pune',
-			'Raigad',
-			'Ratnagiri',
-			'Sindhudurg',
-			'Sangli',
-			'Solapur',
-			'Satara',
-			'Thane',
-			'Wardha',
-			'Washim',
-			'Yavatmal',
-			'Amritsar',
-			'Barnala',
-			'Bathinda',
-			'Firozpur',
-			'Faridkot',
-			'Fatehgarh Sahib',
-			'Fazilka',
-			'Gurdaspur',
-			'Hoshiarpur',
-			'Jalandhar',
-			'Kapurthala',
-			'Ludhiana',
-			'Mansa',
-			'Moga',
-			'Sri Muktsar Sahib',
-			'Pathankot',
-			'Patiala',
-			'Rupnagar',
-			'Ajitgarh (Mohali)',
-			'Sangrur',
-			'Nawanshahr',
-			'Tarn Taran','Ajmer',
-			'Alwar',
-			'Bikaner',
-			'Barmer',
-			'Banswara',
-			'Bharatpur',
-			'Baran',
-			'Bundi',
-			'Bhilwara',
-			'Churu',
-			'Chittorgarh',
-			'Dausa',
-			'Dholpur',
-			'Dungapur',
-			'Ganganagar',
-			'Hanumangarh',
-			'Jhunjhunu',
-			'Jalore',
-			'Jodhpur',
-			'Jaipur',
-			'Jaisalmer',
-			'Jhalawar',
-			'Karauli',
-			'Kota',
-			'Nagaur',
-			'Pali',
-			'Pratapgarh',
-			'Rajsamand',
-			'Sikar',
-			'Sawai Madhopur',
-			'Sirohi',
-			'Tonk',
-			'Udaipur','Agra',
-			'Allahabad',
-			'Aligarh',
-			'Ambedkar Nagar',
-			'Auraiya',
-			'Azamgarh',
-			'Barabanki',
-			'Budaun',
-			'Bagpat',
-			'Bahraich',
-			'Bijnor',
-			'Ballia',
-			'Banda',
-			'Balrampur',
-			'Bareilly',
-			'Basti',
-			'Bulandshahr',
-			'Chandauli',
-			'Chhatrapati Shahuji Maharaj Nagar',
-			'Chitrakoot',
-			'Deoria',
-			'Etah',
-			'Kanshi Ram Nagar',
-			'Etawah',
-			'Firozabad',
-			'Farrukhabad',
-			'Fatehpur',
-			'Faizabad',
-			'Gautam Buddh Nagar',
-			'Gonda',
-			'Ghazipur',
-			'Gorakhpur',
-			'Ghaziabad',
-			'Hamirpur',
-			'Hardoi',
-			'Mahamaya Nagar',
-			'Jhansi',
-			'Jalaun',
-			'Jyotiba Phule Nagar',
-			'Jaunpur district',
-			'Ramabai Nagar (Kanpur Dehat)',
-			'Kannauj',
-			'Kanpur',
-			'Kaushambi',
-			'Kushinagar',
-			'Lalitpur',
-			'Lakhimpur Kheri',
-			'Lucknow',
-			'Mau',
-			'Meerut',
-			'Maharajganj',
-			'Mahoba',
-			'Mirzapur',
-			'Moradabad',
-			'Mainpuri',
-			'Mathura',
-			'Muzaffarnagar',
-			'Panchsheel Nagar district (Hapur)',
-			'Pilibhit',
-			'Shamli',
-			'Pratapgarh',
-			'Rampur',
-			'Raebareli',
-			'Saharanpur',
-			'Sitapur',
-			'Shahjahanpur',
-			'Sant Kabir Nagar',
-			'Siddharthnagar',
-			'Sonbhadra',
-			'Sant Ravidas Nagar',
-			'Sultanpur',
-			'Shravasti',
-			'Unnao',
-			'Varanasi','Almora',
-			'Bageshwar',
-			'Chamoli',
-			'Champawat',
-			'Dehradun',
-			'Haridwar',
-			'Nainital',
-			'Pauri Garhwal',
-			'Pithoragarh',
-			'Rudraprayag',
-			'Tehri Garhwal',
-			'Udham Singh Nagar',
-			'Uttarkashi',
-			"Kolkata"];
-			display();
-			let timer;
-function func(){
-	console.log("hello");
-if(timer){
-	clearTimeout(timer);
-}
-timer=setTimeout(()=>{
-func1(false);
-console.log("hii");
-},500)
-}
-
-function display(){
-	func1(true);
-}
-
-
-function func1(status){
-	document.getElementById("content").innerHTML=null;
-	const name=document.getElementById("typesearch").value;
-	const len=name.length;
-	
-	city_names.forEach((ele,idx)=>{
-		//console.log(ele.toLowerCase(),name,ele.substring(0,len));
-	if((name.toLowerCase()==ele.substring(0,len).toLowerCase() || status) && ele!=""){
-		
-		const div=document.createElement("div");
-		const p=document.createElement("p");
-		p.innerText=ele;
-		p.id="pname";
-		div.append(p);
-		div.id="places";
-		div.style.minHeight="10px";
-		div.style.padding="3px";
-		div.style.width="100%";
-
-		div.addEventListener("click",()=>{
-			const city=event.target.parentNode.children[0].innerText;
-			localStorage.setItem("city",city);
-			location.href="./explore.html";
-		});
-		document.getElementById("content").append(div);
-	}
-});
-}
-</script>
+  export default sportsAcademies;
