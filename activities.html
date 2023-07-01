@@ -14,7 +14,7 @@
     <div id="explorenavbar" style="height: 50px; margin-bottom: 50px;">
 		<div id="logodiv" >
 			<a href="index.html">
-				<img id="logo" src="https://playo-website.imgix.net/company/logo1.png?auto=compress,format" alt="playo logo" style="margin-top: 7px;">
+				<img id="logo" src="https://playo.co/_next/image?url=https%3A%2F%2Fplayo-website.gumlet.io%2Fplayo-website-v2%2FLogo%2Bwith%2BTrademark_Filled.png%3Fq%3D20%26format%3Dauto&w=1920&q=75" alt="playo logo" style="margin-top: -3px;">
 			  </a>
 		</div>
 
@@ -30,7 +30,7 @@
 
 <!--  -->
         <div id="searchbar" style="margin-bottom: 25px;">
-            <input type="text" id="typesearch" placeholder="Type a city" style="border: 1px solid grey; border-top-left-radius: 2px; border-top-right-radius: 2px;">
+            <input type="text" id="typesearch" oninput="debounce(main,1000)" placeholder="Type a city" style="border: 1px solid grey; border-top-left-radius: 2px; border-top-right-radius: 2px;">
             <button id="searchbtn" >Detect</button>
         </div>
 
@@ -539,7 +539,9 @@ var  city_names=['Adilabad',
 			'Udham Singh Nagar',
 			'Uttarkashi'];
       city_names.sort((a,b)=>a-b);
-      //console.log(city_names)
+    //   console.log(city_names)
+	localStorage.setItem("city",JSON.stringify(city_names));
+
 
      for(var i=0; i<city_names.length; i++){
         var showcities=document.querySelector("#citynames");
@@ -649,38 +651,66 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
+	<script>
+
+let cityName=JSON.parse(localStorage.getItem("city"))||[];
+
+
+		// console.log(cityName);
+		let id;
+const debounce = (func) => {
+  if (id) {
+    clearTimeout(id);
+  }
+  id = setTimeout(() => {
+    func();
+  }, 2000);
+};
+
+function main(){
+let inputData=document.getElementById("typesearch").value;
+let length1=inputData.length;
+console.log(inputData+" "+length1)
+
+var showcities=document.querySelector("#citynames");
+showcities.innerHTML=null;
+
+for(var i=0; i<cityName.length; i++){
+		let str1="";
+		let str=cityName[i];
+    for(var j=0;j<length1;j++){
+
+		str1+=str[j];
+	}
+	if(str1==inputData){
+		console.log(str1)
+	 var p=document.createElement("p");
+	 p.addEventListener("click",()=>{
+
+		let data = {
+      city: cityName[i],
+     
+    };
+
+    let location = localStorage.setItem("name", JSON.stringify(data));
+    window.location.href = "explore.html";
+	 })
+     var line=document.createElement("hr");
+         p.innerHTML=cityName[i];
+         showcities.append(p,line);	
+	}
+    }
+
+
+}
+document.querySelector("#searchbtn").addEventListener("click",()=>{
+    let data = {
+      city: document.getElementById("typesearch").value,
+     
+    };
+
+    let location = localStorage.setItem("name", JSON.stringify(data));
+    window.location.href = "explore.html";
+})
+	</script>

@@ -49,10 +49,10 @@ body {
   width: 350px;
   height: 50%;
   display: flex;
+  margin: 0 0 0 75%;
   justify-content: end;
   list-style-type: none;
-  margin: 1.5% 0 0 27.1%;
-  padding: 0;
+  padding: 13px 0px 13px 0px;
   border: 1px solid transparent;
 }
 
