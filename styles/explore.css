@@ -7,6 +7,7 @@
   border: 1px solid transparent;
   margin-bottom: 50px;
   border: 1px solid transparent;
+  min-height: 15em;
 }
 
 #places {
@@ -86,7 +87,7 @@
 /* location filter */
 #locationfilter{
   display: flex;
-  width:22%;
+  width:24%;
   padding-left: 1%;
   padding-right: 1%;
   box-sizing: border-box;
@@ -98,35 +99,41 @@
   transform: translateY(18px);
   margin-right: 6px;
 }
+#locationfilter>img{
+  width: 15%;
+}
+#locationfilter>.align{
+  width: 80%;
+}
 .bold {
   text-transform: capitalize;
   font-weight: bold;
-  margin-right: 30px;
   margin-top: 5px;
   font-size: 16px;
+  width: 100%;
   cursor: pointer;
 }
 .icon2 {
   height: 15px;
   transform: translateY(30px);
   margin-right: 8px;
-  
+  margin-top: 2px;
  
 }
 #searchicon{
 display: flex;
  border: 1px solid transparent;
  margin-left: 20px;
-
-
+/* align-items: ; */
  color: grey;
+ cursor: pointer;
 }
 .filtertext{
  font-size: 16px;
  cursor: pointer;
 }
 .align{
- line-height: 3px;
+ line-height: 1px;
 }
 
 
@@ -136,13 +143,18 @@ display: flex;
  width:26%;
  border: 1px solid transparent;
  padding-left: 2%;
+ padding-bottom: 5%;
   padding-right: 1%;
   box-sizing: border-box;
   border-right: 1px solid rgb(223, 221, 221);
 }
 .shade{
- color: rgb(190, 189, 189);
-
+  padding: 5px 10px;
+  width: 90%;
+  border-radius: 10px;
+  border: 1px solid grey;
+  cursor:auto;
+  height: 15px;
 }
 .space{
  padding-right: 50px;

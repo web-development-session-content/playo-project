@@ -8,7 +8,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="./styles/navbar.css">
 	<link rel="stylesheet" href="./styles/activity.css">
-	<link rel="stylesheet" href="./css/explore.css">
+	<!-- <link rel="stylesheet" href="./css/explore.css"> -->
 	<link rel="stylesheet" href="./css/popup.css">
 	<link rel="stylesheet" href="./styles/footer.css">
 </head>
@@ -23,6 +23,7 @@
 	<!--    popupwindow      ------------------------------------------------------ -->
 	<div id="show">
 		<!--popupwindow show here  -->
+		
 	</div>
 	</div>
 
@@ -32,9 +33,7 @@
 			style="border: 1px solid grey; border-top-left-radius: 2px; border-top-right-radius: 2px;">
 		<button id="searchbtn">Detect</button>
 	</div>
-
-	<div id="citynames"
-		style="margin-bottom: 110px; border: 1px solid rgb(214, 212, 212); padding: 20px; box-sizing: border-box; border-radius: 2px; color: #424242;">
+	<div id="citynames">
 		<p>All citiies</p>
 		<hr>
 
@@ -59,26 +58,28 @@
 	window.onload = () =>{
 		document.querySelector("#typesearch").value = ""
 	}
-	document.querySelector("#typesearch").addEventListener("keyup",()=>{
+	document.querySelector("#typesearch").addEventListener("keyup",(event)=>{
 		let inp = document.querySelector("#typesearch").value
+		if(event.key=="Enter") redirect()
 		fetchCities(inp)
 	})
 	let id;
 	let fetchCities = (inp) =>{
-		console.log("here")
+		// console.log("here")
 		if(id) clearTimeout(id)
 		id = setTimeout(async()=>{
-		console.log("here2")
+		// console.log("here2")
 			try{
-				let response = await fetch(`https://sleepy-teddy-newt.cyclic.app/city_names?city_like=${inp}&_sort=city`)
+				let response = await fetch(`https://sleepy-teddy-newt.cyclic.app/city_names?q=${inp}&_limit=10&_sort=city`)
 				let searchArr = await response.json()
-				// console.log(searchArr)
+				console.log(searchArr)
 				setCities(searchArr)
 			}catch(error){
 				console.log(error)
 			}
-		},1000)
+		},500)
 	}
+	fetchCities("")
 	let setCities = (searchArr) =>{
 		var showcities=document.querySelector("#citynames")
 		if(searchArr.length==0) showcities.innerHTML = "<p>No such city</p><hr>"
@@ -183,13 +184,16 @@
 
 
 document.querySelector("#searchbtn").addEventListener("click",()=>{
-    let data = {
+    redirect()
+})
+let redirect = () =>{
+	let data = {
       city: document.getElementById("typesearch").value,
     };
 
     let location = localStorage.setItem("name", JSON.stringify(data));
     window.location.href = "explore.html";
-})
+}
 
 
 

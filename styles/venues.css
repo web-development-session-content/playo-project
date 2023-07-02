@@ -38,9 +38,9 @@
     }
     
     #dropdownarrow{
-        width: 12px; 
-        height: 8px;
-        padding-top: 20px; 
+        width: 24px; 
+        height: 21px;
+        padding-top: 0px; 
         margin-left: 1%;
     }
     
@@ -225,7 +225,6 @@
         font-size: 36px;
         letter-spacing: 0.5px;
         line-height: 46.8px;
-        color: white;
         margin-right: 7px;
         font-weight: 300;
      } 
@@ -234,7 +233,6 @@
         font-size: 36px;
         letter-spacing: 0.5px;
         line-height: 46.8px;
-        color: #ffff00;
         margin-right: 7px;
         font-weight: 700;
         font-style: italic;
@@ -245,7 +243,6 @@
         font-size: 36px;
         letter-spacing: 0.5px;
         line-height: 46.8px;
-        color: white;
         font-weight: 300;
     } 
 

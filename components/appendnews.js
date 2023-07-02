@@ -7,7 +7,7 @@
             let {title , description, url,urlToImage, publishedAt } = el;
 
             if(title == null || description == null || urlToImage == null || publishedAt == null){
-                return false;
+                // return false;
             }
 
             //Creating elements
@@ -17,12 +17,13 @@
             let dateDiv = document.createElement("div");
             let titleDiv = document.createElement("div");
             let descriptionDiv = document.createElement("div");
-
+// 
             //Set all value
-            img.src = urlToImage;
-            titleDiv.textContent = title;
-            descriptionDiv.textContent = description;
-            dateDiv.textContent = publishedAt;
+            if(urlToImage) img.src = urlToImage;
+            else img.src = 'images/stocknews.jpg'
+            titleDiv.innerHTML = title;
+            descriptionDiv.innerHTML = description;
+            dateDiv.innerHTML = publishedAt;
 
 
             //Append Properly

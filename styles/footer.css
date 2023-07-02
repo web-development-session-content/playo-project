@@ -6,7 +6,12 @@ a{
     text-decoration: none;
     color:rgb(212, 212, 212);
 }
+#footer{
+    background-color:#212121 ;
+}
 #infooter{
+    /* bottom: 0; */
+    /* position: absolute; */
     width:100%;
     height:290px;
     display: flex;
