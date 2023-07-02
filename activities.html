@@ -14,7 +14,7 @@
     <div id="explorenavbar" style="height: 50px; margin-bottom: 50px;">
 		<div id="logodiv" >
 			<a href="index.html">
-				<img id="logo" src="https://playo-website.imgix.net/company/logo1.png?auto=compress,format" alt="playo logo" style="margin-top: 7px;">
+				<img id="logo" src="https://playo-website.gumlet.io/playo-website-v2/Logo+with+Trademark_Filled.png" alt="playo logo" style="margin-top: -2px;">
 			  </a>
 		</div>
 
@@ -30,7 +30,7 @@
 
 <!--  -->
         <div id="searchbar" style="margin-bottom: 25px;">
-            <input type="text" id="typesearch" placeholder="Type a city" style="border: 1px solid grey; border-top-left-radius: 2px; border-top-right-radius: 2px;">
+            <input type="text" id="typesearch" placeholder="Type a city"  style="border: 1px solid grey; border-top-left-radius: 2px; border-top-right-radius: 2px;" >
             <button id="searchbtn" >Detect</button>
         </div>
 
@@ -541,8 +541,28 @@ var  city_names=['Adilabad',
       city_names.sort((a,b)=>a-b);
       //console.log(city_names)
 
+	//   function D_Fun_C(data){
+	// 	data.map((({city})=>{
+	// 		var showcities=document.querySelector("#citynames");
+    //  var p=document.createElement("p");
+    //  var line=document.createElement("hr");
+    //      p.innerHTML=city;
+
+    //      showcities.append(p,line);
+	// 	})
+	//   }
+
+
+	
+
+
+
+
+
+	// cities list appending here 
+
      for(var i=0; i<city_names.length; i++){
-        var showcities=document.querySelector("#citynames");
+	var showcities=document.querySelector("#citynames");
      var p=document.createElement("p");
      var line=document.createElement("hr");
          p.innerHTML=city_names[i];
@@ -622,18 +642,18 @@ var  city_names=['Adilabad',
 // localStorage.setItem("myLocal",JSON.stringify(arr))
 // }
 
-// function find() {
-//     // let c= document.getElementById("cities").value
-//     // console.log(c)
+function find() {
+    let c= document.getElementById("cities").value
+    console.log(c)
     
-//     let data = {
-//       city: document.getElementById("typesearch").value,
+    let data = {
+      city: document.getElementById("typesearch").value,
      
-//     };
+    };
 
-//     let location = localStorage.setItem("name", JSON.stringify(data));
-//     window.location.href = "explore.html";
-//   }
+    let location = localStorage.setItem("name", JSON.stringify(data));
+    window.location.href = "explore.html";
+  }
 
 
 document.querySelector("#searchbtn").addEventListener("click",()=>{
@@ -655,6 +675,85 @@ document.querySelector("#searchbtn").addEventListener("click",()=>{
 
 
 
+    // debouncing funvtion
+
+document.getElementById("typesearch").addEventListener("keyup",()=>{
+	debounce(mainFun);
+});
+
+let id;
+function debounce(func){
+    if(id){
+		clearTimeout(id);
+	}
+   id =	setTimeout(() => {
+		func();
+	},500)
+};
+
+
+const mainFun = async () => {
+	let query1 =  document.getElementById("typesearch").value;
+	try{
+	let response = await fetch(`http://localhost:3000/City_name?q=${query1}`);
+	let data = await response.json();
+	console.log(data);
+	showDataFun(data);
+	}
+	catch(err){
+		console.log(err);
+	}
+
+}
+
+var showcities1=document.querySelector("#citynames");
+function showDataFun(data){
+	showcities1.innerHTML = "";
+	data.forEach(function(elem){
+     var p=document.createElement("p");
+     var line=document.createElement("hr");
+	 p.innerText = elem.city;
+	 showcities1.append(p,line)
+ 	})
+   
+}
+		
+
+
+
+// const debounce = (func,delay) =>{
+// 	let id;
+// 	return function(query){
+// 		if(id){
+// 			clearTimeout(id);
+// 		}
+// 		id=setTimeout(function(){
+// 			func(query);
+// 		},delay)
+// 	}
+// }
+
+// function fetchItems(query){
+// 	console.log(query)
+//     var showcities1=document.querySelector("#citynames");
+// 	var p1=document.createElement("p");
+//     var line1=document.createElement("hr");
+// 		for(var i=0;i<city_names.length;i++){
+// 		if(query == city_names[i]){
+// 	     p1.innerHTML=city_names[i];
+//          showcities1.append(p1,line1);
+// 		}
+	
+// }
+		
+// }
+
+// let betterFetchItems = debounce(fetchItems,500);
+
+// let input = document.getElementById("typesearch");
+// input.addEventListener("keyup",function(e){
+// 	betterFetchItems(e.target.value);
+// })
 
 
 
