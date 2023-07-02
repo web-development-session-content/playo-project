@@ -688,8 +688,9 @@ for(var i=0; i<cityName.length; i++){
 	 var p=document.createElement("p");
 	 p.addEventListener("click",()=>{
 
+		
 		let data = {
-      city: cityName[i],
+      city: document.getElementById("typesearch").value,
      
     };
 
@@ -704,13 +705,13 @@ for(var i=0; i<cityName.length; i++){
 
 
 }
-document.querySelector("#searchbtn").addEventListener("click",()=>{
-    let data = {
-      city: document.getElementById("typesearch").value,
+// document.querySelector("#searchbtn").addEventListener("click",()=>{
+//     let data = {
+//       city: document.getElementById("typesearch").value,
      
-    };
+//     };
 
-    let location = localStorage.setItem("name", JSON.stringify(data));
-    window.location.href = "explore.html";
-})
+//     let location = localStorage.setItem("name", JSON.stringify(data));
+//     window.location.href = "explore.html";
+// })
 	</script>

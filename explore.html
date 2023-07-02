@@ -45,7 +45,7 @@
           <img src="https://playov2.gumlet.net//explore/search-24px@2x.png" alt="" class="icon">
           <div class="align">
             <p class="filtertext">Search</p>
-            <p class="shade filtertext"> For example,"Football"</p>
+            <p class="shade filtertext"> <input type="text" name="" id="searchValue"placeholder="For example,Football"><button id="btn1">Srch</button></p>
 
           </div>
         </div>
@@ -80,6 +80,8 @@
         <p class="timing"><img src="./images/clock.png" alt="" class="clockicon">ljljl</p>
         <p class="coaching">lsjdfljsd</p>
       </div> -->
+
+<div id="pagination"></div>
 
 
       <div id="infooter">
@@ -233,7 +235,7 @@
    
 
 
-    let MyCity=document.getElementById("con");
+
     let my_value = JSON.parse(localStorage.getItem("name"));
     console.log(my_value.city)
 
@@ -246,7 +248,7 @@
 
        
 
-        let response = await fetch("./database/activityData.json");
+        let response = await fetch("http://localhost:3000/cities");
         let data = await response.json();
         //console.log(data);
 
@@ -258,6 +260,14 @@
         })
 
         console.log(filterData);
+
+      
+        myNameData(filterData[0].city);
+        document.getElementById("btn1").addEventListener("click",()=>{
+  // let val1=document.getElementById("searchValue").value;
+  SearchData(filterData);
+
+})
        apprndData(filterData)
     }
 
@@ -265,28 +275,31 @@
   //===========================================================================>
 
 
-
+  let page=1;
+let totalPages;
 
    //Append Data Function 
    function apprndData(data){
     // console.log(data)
     data.map((el)=>{
-      let y = `  <div onclick="details(${el.id})" id= "places" class="clickdiv">
-        <div>
+     
+     let y = `  <div onclick="details(${el.id})" id= "places" class="clickdiv">
+      <div>
           <img src="${el.image}" alt="" class="conimage">
           <p class="imgtext">Coaching</p>
-        </div>
+          </div>
         <p class="highlighttext">${el.name}</p>
         <p class="location">${el.location}</p>
         <p class="timing"><img src="./images/clock.png" alt="" class="clockicon">${el.timing}</p>
         <p class="coaching">${el.name}  Coaching</p>
-      </div>`;
-
+        </div>`;
+        
         let place = document.getElementById("place");
         place.setAttribute("class", "bold");
         place.innerHTML = el.city;
         con.innerHTML += y;
-
+        
+        
         
 
     })
@@ -325,5 +338,104 @@
 
 
 
+
+// let name=localStorage.getItem("my");
+// // let str1=name;
+// // let str2=str1.toLowerCase()
+console.log(name);
+let MyCity=document.getElementById("con");
+
+
+
+function myNameData(name){
+const nm=name;
+  let API_DATA=`http://localhost:3000/cities?city=${name}`
+let length2;
+showAPI(API_DATA);
+async function showAPI(API_DATA){
+  let result=await fetch(API_DATA);
+  let data=await result.json();
+  console.log(data.length);
+  length2=Math.ceil(data.length/4);
+  console.log(length2)
+  myLength(length2,name)
+}
+
+  showData(page,name);
+
+}
+
+async function showData(page,name){
+  let result=await fetch(`http://localhost:3000/cities?city=${name}&_page=${page}&_limit=4`);
+  let data =await result.json();
+  console.log(data)
+  con.innerHTML=null;
+  apprndData(data)
+ }
+
+
+
+
+function myLength(l,name){
+  let paginationData=document.getElementById("pagination");
+paginationData.innerHTML=null;
+
+for(let i=1;i<=l;i++){
+  let btn=document.createElement("button");
+  btn.setAttribute("class","pagination-button");
+  
+  btn.innerText=i;
+  btn.addEventListener("click",()=>{
+    showData(i,name);
+  })
+  paginationData.append(btn);
+}
+}
+
+
+
+
+// async function SearchData(){
+//         //Getting the value again
+//         var search_value = my_value.city;
+
+
+       
+
+//         let response = await fetch("./database/activityData.json");
+//         let data = await response.json();
+//         //console.log(data);
+
+//         //Writing Function for filter data based on search results
+
+//         let filterData = data.filter((el)=>{
+//             let regex = new RegExp(`^${search_value}`, "gi" );
+//             return el.city.match(regex);
+//         })
+
+//         console.log(filterData);
+//         // localStorage.setItem("my",(filterData[0].city));
+       
+//        //apprndData(filterData)
+//     }
+
+
+function SearchData(dt){
+  console.log(dt);
+  let val1=document.getElementById("searchValue").value;
+  con.innerHTML=null;
+  let newData=dt.filter(function(el){
+    return val1==el.sport;
+  })
+  console.log(newData);
+ if(newData.length!=0){
+  apprndData(newData)
+ }
+ else{
+  let h1=document.createElement("h1");
+  h1.innerHTML="Not Available in this city"
+  con.append(h1);
+ }
+}
 
 </script>
