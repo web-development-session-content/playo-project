@@ -86,6 +86,7 @@ document.querySelector("#sendOTP").addEventListener("click", ()=>{
 
                 })
 
+                
 
             }
             else{
