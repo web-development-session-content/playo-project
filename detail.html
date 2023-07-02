@@ -8,8 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/detail.css">
-    <!-- <link rel="stylesheet" href="./styles/popup.css"> -->
+    <link rel="stylesheet" href="./styles/popup.css">
     <link rel="stylesheet" href="./styles/activity.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/callpopup.css">
@@ -19,13 +20,8 @@
 <body>
   <!-- navbar -->
   <div id="explorenavbar" style="height: 60px; margin-bottom: 0px;">
-		<div id="logodiv" >
-			<a href="index.html">
-				<img id="logo" src="https://playo-website.imgix.net/company/logo1.png?auto=compress,format" alt="playo logo" style="margin-top: 7px;">
-			  </a>
-		</div>
-
-    </div>
+		
+  </div>
 
 
     <!-- container -->
@@ -93,50 +89,8 @@
     </div> 
     <!-- footer -->
     <div id="infooter">
-      <div id="div1">
-          <div id="weblogo">
-              <a href="index.html"><img src="https://playo-website.gumlet.net/logo/playo-logo-footer-website.png?auto=format,compress&h=100" alt="logo" width="100%" height="100%"></a>
-          </div>
-          <div id="playstore">
-              <a href="https://play.google.com/store/apps/details?id=com.techmash.playo">
-                  <img src="https://playo-website.gumlet.net/icons/download-android.png?auto=format,compress " >
-              </a>
-              <a href="https://apps.apple.com/us/app/playo-local-sports-community/id1018786950?ls=1">
-                  <img src="https://playo-website.gumlet.net/icons/download-ios.png?auto=format,compress" >
-              </a>
-          </div>
-          <div id="copyright">
-              <p>©2022 TechMash Solutions Private Limited.<span> All Rights Reserved.</span></p>
-          </div>
-          <div id="loweritems">
-              <a href="faq.html"><p>FAQs</p></a>
-              <a href=""><p>Privacy POlicy</p></a>
-              <a href=""><p>Terms Of Service</p></a>
-              <a href=""><p>Cancellation & Refund Policy</p></a>
-              <a href=""><p>Careers</p></a>
-              <a href=""><p id="hiring">We're Hiring!</p></a>
-          </div>
-      </div>
-      <div id="div2">
-          <a href="about.html"><p>About Us</p></a>
-          <a href="partner.html"><p>Partner With Us</p></a>
-          <a href="brandact.html"><p>Brand Activations</p></a>
-          <a href="corporate.html"><p>Corporate Offerings</p></a>
-          <a href="contact.html"><p>contact Us</p></a>
-      </div>
-      <div id="div3">
-          <a href="venues.html"><p>Book Venues</p></a>
-          <a href="activities.html"><p>Activities</p></a>
-          <a href="blog.html"><p>Blog</p></a>
-          <a href="faq.html"><p>FAQ's</p></a>
-      </div>
-      <div id="div4">
-          <a href="https://www.facebook.com/PlayoApp/"><p>Facebook</p></a>
-          <a href="https://twitter.com/playoApp"><p>Twitter</p></a>
-          <a href="https://www.instagram.com/playoapp/"><p>Instagram</p></a>
-          <a href="https://www.linkedin.com/company/playo"><p>LinkdIn</p></a>
-      </div>
-    
+      
+    </div>
 </body>
 </html>
 <script src="./scripts/callpopup.js">
@@ -144,17 +98,14 @@
 
 
 </script>
-<script >
+<script type="module">
 
-
+import navbar from "./components/navbar.js"
+document.querySelector("#explorenavbar").innerHTML = navbar()
+import footer from "./components/footer.js"
+document.querySelector("#infooter").innerHTML = footer()
 
 let modal_container = document.getElementById("modal_container");
-
-
-
-
-
-
 
 // let data =JSON.parse(localStorage.getItem("id"))
 
@@ -322,10 +273,6 @@ searchLocation();
     async function searchLocation(){
         //Getting the value again
         var search_value = local_data.id;
-
-
-       
-
         let response = await fetch("./database/activityData.json");
         let data = await response.json();
         //console.log(data);
@@ -352,13 +299,13 @@ searchLocation();
 
    //Append Data Function 
    function apprndData(data){
-    // console.log(data)
+    console.log(data)
     data.map((el)=>{
       
       
       let y=`
       <div id="left">
-        <img src="${el.image2}" alt="${el.image}" id="leftimage" >
+        <img src="${el.image}" alt="${el.image2}" id="leftimage" >
         <div>
          <label for="" class="orange">Overview</label>
           <div id="line"></div>
@@ -400,7 +347,7 @@ searchLocation();
         </div >
         <div id="time"><p >${el.timing}
         </p></div>
-        <div id="rightlocation"><p>${el.location}</p></div>
+        <div id="rightlocation"><p>${el.location.toLowerCase().charAt(0).toUpperCase() + el.location.toLowerCase().slice(1)}</p></div>
         <div id="call" onclick="popupFunction()" ><p>CALL</p></div>
       </div>`;
 

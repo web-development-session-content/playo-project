@@ -120,8 +120,8 @@ document.querySelector("#sendOTP").addEventListener("click", ()=>{
 
 
 //Add values to the html file
-let data = JSON.parse(localStorage.getItem("singleVenueDetails"));
-let { name : myName, imgUrl ,rating , filter_by} = data;
+let data = JSON.parse(localStorage.getItem("venueDetails"));
+let { name : myName, imgUrl ,rating , filter_by} = data[0];
 let category = filter_by[0];
 let vote = localStorage.getItem("votes")
 //console.log(data, category, vote)
@@ -156,7 +156,7 @@ function sportlogo()
 
     let onlogoname= document.getElementById("onlogoname");
     onlogoname.style.color="white";
-
+    cartobj[sportName]=onlogoname.textContent
 }
 
 // these functions for the change color of day name and date div
@@ -171,7 +171,7 @@ function day1()
 
     let m1= document.getElementById("m1");
     m1.style.color="white";
-
+    cartobj[sportName]=onlogoname.textContent
 }
 
 function day2()
@@ -527,7 +527,7 @@ function addtocart()
    var courtnamediv= document.createElement("div");
    courtnamediv.id="courtnamediv";
    var courtimage= document.createElement("img");
-   courtimage.src="https://playo-website.gumlet.net/icons/court.svg";
+   courtimage.src="https://playo-website.gumlet.io/playo-website-v2/logos-icons/Court+Outline+1.svg";
    var courtname= document.createElement("p");
    courtname.textContent="6 a Side Court 1";
    courtnamediv.append(courtimage, courtname);
@@ -540,7 +540,7 @@ function addtocart()
     datecart.id="datecart";
     
     var datecartimg= document.createElement("img");
-    datecartimg.src = "https://playo-website.gumlet.net/icons/calendar.svg";
+    datecartimg.src = "https://playo-website.gumlet.io/playo-website-v2/logos-icons/appointment.svg";
     var datename = document.createElement("p");
     datename.textContent= "22, January 2022";
     datecart.append(datecartimg, datename);
@@ -549,7 +549,7 @@ function addtocart()
     timecart.id="timecart";
     timedatecartdiv.append(datecart, timecart);
     var timecartimg = document.createElement("img");
-    timecartimg.src="https://playo-website.gumlet.net/icons/clock.svg";
+    timecartimg.src="https://playo-website.gumlet.io/playo-website-v2/logos-icons/time.svg";
     var timename = document.createElement("p");
     timename.textContent= "06.00 PM to 07.00 PM";
     timecart.append(timecartimg, timename);
@@ -559,7 +559,7 @@ function addtocart()
     var costdiv= document.createElement("div");
     costdiv.id="costdiv";
     var costimg= document.createElement("img");
-    costimg.src="https://playo-website.gumlet.net/icons/money.svg";
+    costimg.src="https://playo-website.gumlet.io/playo-website-v2/logos-icons/money.svg";
     var costname=document.createElement("p");
     costname.textContent=" INR "+" "+ count*2200;
     costdiv.append(costimg, costname);

@@ -21,9 +21,9 @@
             </div>
     
             <div id="nav2div"> 
-                <img id="pplogo" src="https://playo-website.gumlet.net/playo_functional/Icons/user_blank.svg" alt="">
+                <img id="pplogo" src="./images/emptyuser.png" alt="">
                 <p id="myBtn" class="loginp">Login/Signup</p>
-                <img id="dropdownarrow" src="https://playo-website.gumlet.net/playo_functional/Icons/arrow_light.svg" alt="arrow">
+                <img id="dropdownarrow" src="./images/drop.png" alt="arrow">
             </div>
     
            
@@ -81,7 +81,7 @@
             <div id="selectsport">
                 <p class="alltitles">SELECT SPORT</p>
                 <div id="sportlogodiv" onclick= "sportlogo()">
-                    <img id="sportlogo" src="https://d3qokvektr0ozw.cloudfront.net/SPORTICONS/SP2/ic_football_grey.png" width="52%" height="60%">
+                    <img id="sportlogo" src="./images/trophy.png" width="52%" height="50%">
                     <p id="onlogoname"></p>
                 </div>
             </div>
@@ -178,51 +178,7 @@
         </div>
     </div>
     <div id="footer">
-        <div id="infooter">
-            <div id="div1">
-                <div id="weblogo">
-                    <a href="index.html"><img src="https://playo-website.gumlet.net/logo/playo-logo-footer-website.png?auto=format,compress&h=100" alt="logo" width="100%" height="100%"></a>
-                </div>
-                <div id="playstore">
-                    <a href="https://play.google.com/store/apps/details?id=com.techmash.playo">
-                        <img src="https://playo-website.gumlet.net/icons/download-android.png?auto=format,compress " >
-                    </a>
-                    <a href="https://apps.apple.com/us/app/playo-local-sports-community/id1018786950?ls=1">
-                        <img src="https://playo-website.gumlet.net/icons/download-ios.png?auto=format,compress" >
-                    </a>
-                </div>
-                <div id="copyright">
-                    <p>©2022 TechMash Solutions Private Limited.<span> All Rights Reserved.</span></p>
-                </div>
-                <div id="loweritems">
-                    <a href="faq.html"><p>FAQs</p></a>
-                    <a href=""><p>Privacy POlicy</p></a>
-                    <a href=""><p>Terms Of Service</p></a>
-                    <a href=""><p>Cancellation & Refund Policy</p></a>
-                    <a href=""><p>Careers</p></a>
-                    <a href=""><p id="hiring">We're Hiring!</p></a>
-                </div>
-            </div>
-            <div id="div2">
-                <a href="about.html"><p>About Us</p></a>
-                <a href="partner.html"><p>Partner With Us</p></a>
-                <a href="brandact.html"><p>Brand Activations</p></a>
-                <a href="corporate.html"><p>Corporate Offerings</p></a>
-                <a href="contact.html"><p>contact Us</p></a>
-            </div>
-            <div id="div3">
-                <a href="venues.html"><p>Book Venues</p></a>
-                <a href="activities.html"><p>Activities</p></a>
-                <a href="blog.html"><p>Blog</p></a>
-                <a href="faq.html"><p>FAQ's</p></a>
-            </div>
-            <div id="div4">
-                <a href="https://www.facebook.com/PlayoApp/"><p>Facebook</p></a>
-                <a href="https://twitter.com/playoApp"><p>Twitter</p></a>
-                <a href="https://www.instagram.com/playoapp/"><p>Instagram</p></a>
-                <a href="https://www.linkedin.com/company/playo"><p>LinkdIn</p></a>
-            </div>
-        </div>
+        
     </div>
 
      <!-- need help button div -->
@@ -237,7 +193,10 @@
 
 </body>
 </html>
-
+<script type="module">
+    import footer from "./components/footer.js"
+    document.querySelector("#footer").innerHTML = footer()
+</script>
 <script src= ./scripts/bookVenue.js >
 
 

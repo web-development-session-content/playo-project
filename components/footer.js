@@ -7,14 +7,14 @@ function footer()
     return `<div id="infooter">
     <div id="div1">
         <div id="weblogo">
-            <a href="index.html"><img src="https://playo-website.gumlet.net/logo/playo-logo-footer-website.png?auto=format,compress&h=100" alt="logo" width="100%" height="100%"></a>
+            <a href="index.html"><img src="./images/LogowithTrademark_Filled.webp" alt="logo" width="100%" height="100%"></a>
         </div>
         <div id="playstore">
             <a href="https://play.google.com/store/apps/details?id=com.techmash.playo">
-                <img src="https://playo-website.gumlet.net/icons/download-android.png?auto=format,compress " >
+                <img src="./images/Playstore.png" >
             </a>
             <a href="https://apps.apple.com/us/app/playo-local-sports-community/id1018786950?ls=1">
-                <img src="https://playo-website.gumlet.net/icons/download-ios.png?auto=format,compress" >
+                <img src="./images/apple-store.png" >
             </a>
         </div>
         <div id="copyright">

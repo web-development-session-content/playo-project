@@ -102,6 +102,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        /* align-items: center; */
     }
 
     .banner> a> img{
@@ -145,20 +146,15 @@
         line-height: 43px;
         font-size: 14px;
         color: #19232d;
+        background-color: #F3F3F2;
+        border-bottom: none;
+        cursor: pointer;
     }
 
-    .navbar> div>div:hover{
-        border-bottom: 2px solid #548A2F;
-        height: 43px;
+    .navbar>div>div:hover,.navbar>div>div.active{
+        border-bottom: 3px solid #548A2F;
         background-color: white;
     }
-
-    .navbar> div>div:nth-child(1){
-        border-bottom: 2px solid #548A2F;
-        height: 43px;
-        background-color: white;
-    }
-
 /* === Navbar End === */
 
 
@@ -171,6 +167,7 @@
         border: 1px solid transparent;
         padding-left: 25px;
         padding-right: 25px;
+        /* height: 50em; */
     }
 
     /* Main Container */
@@ -334,6 +331,26 @@
 
 
     /* Dynamic part End */
+
+    /*Pagination Start*/
+    .pagination{
+        float: right;
+        display: flex;
+        gap: 10px;
+        margin-top: 3em;
+        margin-right: 20px;
+    }
+    .pagination>div{
+        border: 1px solid black;
+        padding: 5px 12px;
+        background-color: #eeeeee;
+        cursor: pointer;
+    }
+    .pagination>div.active{
+        background-color: black;
+        color: white;
+    }
+    /*Pagination End*/
 
     /* Left Box End*/
 

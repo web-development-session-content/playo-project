@@ -455,19 +455,21 @@ document.querySelector("#sendOTP").addEventListener("click", ()=>{
 
 
     var options = {
-        "key": "rzp_test_VhRZKygRJUvXe9", // Enter the Key ID generated from the Dashboard
+        "key": "rzp_test_8cEjdnZqmkJ1Ge", // Enter the Key ID generated from the Dashboard
         "amount": price, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
         "currency": "INR",
         "name": "Playo",
         "description": "Test Payment",
-        "image": "https://blog.playo.co/wp-content/uploads/2018/04/Playo-dp-gradient4-1.png",
+        "image": "https://playo-website.gumlet.io/playo-website-v2/Logo+with+Trademark_Filled.png",
         // "order_id": "order_Ef80WJDPBmAeNt", //Pass the `id` obtained in the previous step
         // "account_id": "acc_Ef7ArAsdU5t0XL",
         "handler": function (response){
             alert(response.razorpay_payment_id);
-            alert(response.razorpay_order_id);
-            alert(response.razorpay_signature)
+            // alert(response.razorpay_order_id);
+            // alert(response.razorpay_signature);
+            alert("Payment Succesfull!!")
         }
+
     };
     var rzp1 = new Razorpay(options);
     document.getElementById('rzp-button1').onclick = function(e){
