@@ -1,76 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/explore.css">
-    <link rel="stylesheet" href="./styles/popup.css">
-    <link rel="stylesheet" href="./styles/activity.css">
-    <link rel="stylesheet" href="./styles/footer.css">
-  </head>
- 
-  <body>
-    <div id="main">
-      
-      <!-- Navbar start -->
-      <div id="explorenavbar" style="height: 50px; margin-bottom: 35px;">
-        
-        <div id="logodiv" >
-          <a href="index.html">
-            <img id="logo" src="https://playo.co/_next/image?url=https%3A%2F%2Fplayo-website.gumlet.io%2Fplayo-website-v2%2FLogo%2Bwith%2BTrademark_Filled.png%3Fq%3D20%26format%3Dauto&w=1920&q=75" alt="playo logo" style="margin-top: -3px;">
-          </a>
-         
-        </div>
-    
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/explore.css">
+  <link rel="stylesheet" href="./styles/popup.css">
+  <link rel="stylesheet" href="./styles/activity.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+</head>
+
+<body>
+  <div id="main">
+
+    <!-- Navbar start -->
+    <div id="explorenavbar" style="height: 50px; margin-bottom: 35px;">
+
+      <div id="logodiv">
+        <a href="index.html">
+          <img id="logo"
+            src="https://playo.co/_next/image?url=https%3A%2F%2Fplayo-website.gumlet.io%2Fplayo-website-v2%2FLogo%2Bwith%2BTrademark_Filled.png%3Fq%3D20%26format%3Dauto&w=1920&q=75"
+            alt="playo logo" style="margin-top: -3px;">
+        </a>
+
       </div>
-      <!-- Navbar End -->
+
+    </div>
+    <!-- Navbar End -->
 
 
-      <div id="filter">
-        <div id="locationfilter">
-          <img src="https://playov2.gumlet.net//explore/Group+3539%402x.png" alt="" class="icon" />
-          <div class="align">
-            <P class="filtertext">Location</P>
-            
-            <span id="place"></span>
-          </div>
-          <div id="searchicon">
-            <img src="https://playov2.gumlet.net//explore/location_search@2x.png" alt="" class="icon2" />
-               <P style="transform: translateY(15px);" id="detect">Detect</P>
-          </div>
-        </div>
-        <div id="searchfilter">
-          <img src="https://playov2.gumlet.net//explore/search-24px@2x.png" alt="" class="icon">
-          <div class="align">
-            <p class="filtertext">Search</p>
-            <p class="shade filtertext"> <input type="text" name="" id="searchValue"placeholder="For example,Football"><button id="btn1">Srch</button></p>
+    <div id="filter">
+      <div id="locationfilter">
+        <img src="https://playov2.gumlet.net//explore/Group+3539%402x.png" alt="" class="icon" />
+        <div class="align">
+          <P class="filtertext">Location</P>
 
-          </div>
+          <span id="place"></span>
         </div>
-        <div id="sportsfilter">
-          <img src="https://playov2.gumlet.net//explore/Group+18%402x.png" alt="" class="icon" >
-          <div class="align">
-            <p class="filtertext">Sport</p>
-            <select class="bold space">
-              <option value="Select Sports">Select Sports</option>
-              </select>
-             </div>
-          
-        </div>
-        <div id="catfilter">
-          <img src="https://playov2.gumlet.net//explore/menu_vs_outlined@2x.png" alt="" class="icon">
-          <div class="align">
-            <p class="filtertext">Categories</p>
-            <select class="bold space1">
-              <option value="Select Sports">All</option>
-              </select>
-          </div>
+        <div id="searchicon">
+          <img src="https://playov2.gumlet.net//explore/location_search@2x.png" alt="" class="icon2" />
+          <P style="transform: translateY(15px);" id="detect">Detect</P>
         </div>
       </div>
-      <div id="con"></div>
-      <!-- <div id= "places">
+      <div id="searchfilter">
+        <img src="https://playov2.gumlet.net//explore/search-24px@2x.png" alt="" class="icon">
+        <div class="align">
+          <p class="filtertext">Search</p>
+          <p class="shade filtertext"> <input type="text" name="" id="searchValue"
+              placeholder="For example,Football"><button id="btn1">Srch</button></p>
+
+        </div>
+      </div>
+      <div id="sportsfilter">
+        <img src="https://playov2.gumlet.net//explore/Group+18%402x.png" alt="" class="icon">
+        <div class="align">
+          <p class="filtertext" id="filtertext">Sport</p>
+          <select class="bold space" id="bold-space">
+            <option value="Select-Sports">Select-Sports</option>
+            <option value="cricket">cricket</option>
+            <option value="badminton">badminton</option>
+            <option value="football">football</option>
+            <option value="swimming">swimming</option>
+          </select>
+        </div>
+
+      </div>
+      <div id="catfilter">
+        <img src="https://playov2.gumlet.net//explore/menu_vs_outlined@2x.png" alt="" class="icon">
+        <div class="align">
+          <p class="filtertext">Categories</p>
+          <select class="bold space1"id="bold-space1">
+            <option value="Select-Sports">All</option>
+            <option value="low">low</option>
+            <option value="high">high</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div id="con"></div>
+    <!-- <div id= "places">
         <div>
           <img src="https://playo-activities.gumlet.io/SVMBOWLINGALLEY/SVMBowlingAlleycover.jpg?q=40" alt="" class="conimage">
           <p class="imgtext">Book</p>
@@ -81,65 +91,105 @@
         <p class="coaching">lsjdfljsd</p>
       </div> -->
 
-<div id="pagination"></div>
+    <div id="pagination"></div>
 
 
-      <div id="infooter">
-        <div id="div1">
-            <div id="weblogo">
-                <a href="index.html"><img src="https://playo-website.gumlet.io/playo-website-v2/Logo+with+Trademark_Filled.png" alt="logo" width="100%" height="100%"></a>
-            </div>
-            <p id="para1">Your Sports Community App</p>
-            <div id="playstore">
-                <a href="https://play.google.com/store/apps/details?id=com.techmash.playo">
-                    <img src="https://playo.co/_next/image?url=https%3A%2F%2Fplayo-website.gumlet.io%2Fplayo-website-v2%2Fstatic_pages%2FPlay%2Bstore.png&w=1920&q=75"width=170px >
-                </a>
-                <a href="https://apps.apple.com/us/app/playo-local-sports-community/id1018786950?ls=1">
-                    <img src="https://playo.co/_next/image?url=https%3A%2F%2Fplayo-website.gumlet.io%2Fplayo-website-v2%2Fstatic_pages%2Fapple-padding-2x.png&w=1920&q=75"width=170px >
-                </a>
-            </div>
-            <div id="copyright">
-                <p>©2022 TechMash Solutions Private Limited.<span> All Rights Reserved.</span></p>
-            </div>
-            <div id="loweritems">
-                <a href="faq.html"><p>FAQs</p></a>
-                <a href=""><p>Privacy POlicy</p></a>
-                <a href=""><p>Terms Of Service</p></a>
-                <a href=""><p>Cancellation & Refund Policy</p></a>
-                <a href=""><p>Careers</p></a>
-                <a href=""><p id="hiring">We're Hiring!</p></a>
-            </div>
+    <div id="infooter">
+      <div id="div1">
+        <div id="weblogo">
+          <a href="index.html"><img
+              src="https://playo-website.gumlet.io/playo-website-v2/Logo+with+Trademark_Filled.png" alt="logo"
+              width="100%" height="100%"></a>
         </div>
-        <div id="div2">
-            <a href="about.html"><p>About Us</p></a>
-            <a href="partner.html"><p>Partner With Us</p></a>
-            <a href="brandact.html"><p>Brand Activations</p></a>
-            <a href="corporate.html"><p>Corporate Offerings</p></a>
-            <a href="contact.html"><p>contact Us</p></a>
+        <p id="para1">Your Sports Community App</p>
+        <div id="playstore">
+          <a href="https://play.google.com/store/apps/details?id=com.techmash.playo">
+            <img
+              src="https://playo.co/_next/image?url=https%3A%2F%2Fplayo-website.gumlet.io%2Fplayo-website-v2%2Fstatic_pages%2FPlay%2Bstore.png&w=1920&q=75"
+              width=170px>
+          </a>
+          <a href="https://apps.apple.com/us/app/playo-local-sports-community/id1018786950?ls=1">
+            <img
+              src="https://playo.co/_next/image?url=https%3A%2F%2Fplayo-website.gumlet.io%2Fplayo-website-v2%2Fstatic_pages%2Fapple-padding-2x.png&w=1920&q=75"
+              width=170px>
+          </a>
         </div>
-        <div id="div3">
-            <a href="venues.html"><p>Book Venues</p></a>
-            <a href="activities.html"><p>Activities</p></a>
-            <a href="blog.html"><p>Blog</p></a>
-            <a href="faq.html"><p>FAQ's</p></a>
+        <div id="copyright">
+          <p>©2022 TechMash Solutions Private Limited.<span> All Rights Reserved.</span></p>
         </div>
-        <div id="div4">
-          <a href="https://www.facebook.com/PlayoApp/">
-            <img src="https://playo-website.gumlet.io/playo-website-v2/static_pages/footer-instagram.png"width=40px>
-            </a>
-            <a href="https://twitter.com/playoApp"> <img src="https://playo-website.gumlet.io/playo-website-v2/static_pages/footer-facebook.png"width=40px></a>
-            <a href="https://www.instagram.com/playoapp/"> <img src="https://playo-website.gumlet.io/playo-website-v2/static_pages/footer-linkedin.png"width=40px></a>
-            <a href="https://www.linkedin.com/company/playo"> <img src="https://playo-website.gumlet.io/playo-website-v2/static_pages/footer-twitter.png" width=40px></a>
+        <div id="loweritems">
+          <a href="faq.html">
+            <p>FAQs</p>
+          </a>
+          <a href="">
+            <p>Privacy POlicy</p>
+          </a>
+          <a href="">
+            <p>Terms Of Service</p>
+          </a>
+          <a href="">
+            <p>Cancellation & Refund Policy</p>
+          </a>
+          <a href="">
+            <p>Careers</p>
+          </a>
+          <a href="">
+            <p id="hiring">We're Hiring!</p>
+          </a>
         </div>
+      </div>
+      <div id="div2">
+        <a href="about.html">
+          <p>About Us</p>
+        </a>
+        <a href="partner.html">
+          <p>Partner With Us</p>
+        </a>
+        <a href="brandact.html">
+          <p>Brand Activations</p>
+        </a>
+        <a href="corporate.html">
+          <p>Corporate Offerings</p>
+        </a>
+        <a href="contact.html">
+          <p>contact Us</p>
+        </a>
+      </div>
+      <div id="div3">
+        <a href="venues.html">
+          <p>Book Venues</p>
+        </a>
+        <a href="activities.html">
+          <p>Activities</p>
+        </a>
+        <a href="blog.html">
+          <p>Blog</p>
+        </a>
+        <a href="faq.html">
+          <p>FAQ's</p>
+        </a>
+      </div>
+      <div id="div4">
+        <a href="https://www.facebook.com/PlayoApp/">
+          <img src="https://playo-website.gumlet.io/playo-website-v2/static_pages/footer-instagram.png" width=40px>
+        </a>
+        <a href="https://twitter.com/playoApp"> <img
+            src="https://playo-website.gumlet.io/playo-website-v2/static_pages/footer-facebook.png" width=40px></a>
+        <a href="https://www.instagram.com/playoapp/"> <img
+            src="https://playo-website.gumlet.io/playo-website-v2/static_pages/footer-linkedin.png" width=40px></a>
+        <a href="https://www.linkedin.com/company/playo"> <img
+            src="https://playo-website.gumlet.io/playo-website-v2/static_pages/footer-twitter.png" width=40px></a>
+      </div>
     </div>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
 
 
 
-<script  >
-  
+<script>
+
 
   // for (let x in data) {
   //   var cityx = data[x];
@@ -216,74 +266,80 @@
 
 
   // add();
+
+
+
+
+
+
+
+
+
+
+  //Filtering array of objects from the data base start (With Debouncing Feature)
+
+  //=======================================================================>
+
+  //Selectiong Html Content
+
+
+
+
+
+  let my_value = JSON.parse(localStorage.getItem("name"));
+  console.log(my_value.city)
+
+  searchLocation();
+  //Search Function Code 
+  async function searchLocation() {
+    //Getting the value again
+    var search_value = my_value.city;
+
+
+
+
+    let response = await fetch("http://localhost:3000/cities");
+    let data = await response.json();
+    //console.log(data);
+
+    //Writing Function for filter data based on search results
+
+    let filterData = data.filter((el) => {
+      let regex = new RegExp(`^${search_value}`, "gi");
+      return el.city.match(regex);
+    })
+
+    console.log(filterData);
+
+
+    myNameData(filterData[0].city);
+    // document.getElementById("btn1").addEventListener("click", () => {
+    //   SearchData(filterData);
+
+    // })
+    // document.getElementById("bold-space").addEventListener("click", () => {
+    //   SearchData1(filterData);
+
+    // })
  
 
 
-
-
-
-
-
-
-
-//Filtering array of objects from the data base start (With Debouncing Feature)
-
-//=======================================================================>
-
-    //Selectiong Html Content
-
-   
-
-
-
-    let my_value = JSON.parse(localStorage.getItem("name"));
-    console.log(my_value.city)
-
-    searchLocation();
-    //Search Function Code 
-    async function searchLocation(){
-        //Getting the value again
-        var search_value = my_value.city;
-
-
-       
-
-        let response = await fetch("http://localhost:3000/cities");
-        let data = await response.json();
-        //console.log(data);
-
-        //Writing Function for filter data based on search results
-
-        let filterData = data.filter((el)=>{
-            let regex = new RegExp(`^${search_value}`, "gi" );
-            return el.city.match(regex);
-        })
-
-        console.log(filterData);
-
-      
-        myNameData(filterData[0].city);
-        document.getElementById("btn1").addEventListener("click",()=>{
-  // let val1=document.getElementById("searchValue").value;
-  SearchData(filterData);
-
-})
-       apprndData(filterData)
-    }
+    apprndData(filterData)
+  }
 
 
   //===========================================================================>
 
 
-  let page=1;
-let totalPages;
+  let page = 1;
+  let totalPages;
 
-   //Append Data Function 
-   function apprndData(data){
+  //Append Data Function 
+  function apprndData(data) {
     // console.log(data)
-    data.map((el)=>{
-     
-     let y = `  <div onclick="details(${el.id})" id= "places" class="clickdiv">
+    data.map((el) => {
+
+      let y = `  <div onclick="details(${el.id})" id= "places" class="clickdiv">
       <div>
           <img src="${el.image}" alt="" class="conimage">
           <p class="imgtext">Coaching</p>
@@ -293,22 +349,22 @@ let totalPages;
         <p class="timing"><img src="./images/clock.png" alt="" class="clockicon">${el.timing}</p>
         <p class="coaching">${el.name}  Coaching</p>
         </div>`;
-        
-        let place = document.getElementById("place");
-        place.setAttribute("class", "bold");
-        place.innerHTML = el.city;
-        con.innerHTML += y;
-        
-        
-        
+
+      let place = document.getElementById("place");
+      place.setAttribute("class", "bold");
+      place.innerHTML = el.city;
+      con.innerHTML += y;
+
+
+
 
     })
-  
-
-   }
 
 
-   function details(x) {
+  }
+
+
+  function details(x) {
     console.log("id:", x);
     let data = {
       id: x,
@@ -317,125 +373,197 @@ let totalPages;
     let location = localStorage.setItem("id", JSON.stringify(data));
     window.location.href = "detail.html";
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //Filtering array of objects from the data base End (With Debouncing Feature)
+
+
+
+
+
+
+
+
+  // let name=localStorage.getItem("my");
+  // // let str1=name;
+  // // let str2=str1.toLowerCase()
+  console.log(name);
+  let MyCity = document.getElementById("con");
+
+
+
+  function myNameData(name) {
    
+    let API_DATA = `http://localhost:3000/cities?city=${name}`
+    let length2;
+    showAPI(API_DATA);
+    async function showAPI(API_DATA) {
+      let result = await fetch(API_DATA);
+      let data = await result.json();
+      console.log(data.length);
+      length2 = Math.ceil(data.length / 4);
+      console.log(length2)
+      myLength(length2, name)
+    }
+
+    showData(page, name);
+
+  }
+
+  async function showData(page, name) {
+    let result = await fetch(`http://localhost:3000/cities?city=${name}&_page=${page}&_limit=4`);
+    let data = await result.json();
+    console.log(data)
+    con.innerHTML = null;
+    document.getElementById("bold-space1").addEventListener("click", () => {
+      SearchData2(data);
+
+    })
+
+    document.getElementById("btn1").addEventListener("click", () => {
+      SearchData(data);
+
+    })
+    document.getElementById("bold-space").addEventListener("click", () => {
+      SearchData1(data);
+
+    })
+ 
+    apprndData(data)
+
+  }
 
 
 
+
+  function myLength(l, name) {
+    let paginationData = document.getElementById("pagination");
+    paginationData.innerHTML = null;
+
+    for (let i = 1; i <= l; i++) {
+      let btn = document.createElement("button");
+      btn.setAttribute("class", "pagination-button");
+
+      btn.innerText = i;
+      btn.addEventListener("click", () => {
+        showData(i, name);
+      })
+      paginationData.append(btn);
+    }
+  }
+
+
+
+
+  // async function SearchData(){
+  //         //Getting the value again
+  //         var search_value = my_value.city;
+
+
+
+
+  //         let response = await fetch("./database/activityData.json");
+  //         let data = await response.json();
+  //         //console.log(data);
+
+  //         //Writing Function for filter data based on search results
+
+  //         let filterData = data.filter((el)=>{
+  //             let regex = new RegExp(`^${search_value}`, "gi" );
+  //             return el.city.match(regex);
+  //         })
+
+  //         console.log(filterData);
+  //         // localStorage.setItem("my",(filterData[0].city));
+
+  //        //apprndData(filterData)
+  //     }
+
+
+  function SearchData(dt) {
+    console.log(dt);
+    let val1 = document.getElementById("searchValue").value;
+   con.innerHTML = null;
+    let newData = dt.filter(function (el) {
+      return val1 == el.sport;
+    })
+    console.log(newData);
+    if (newData.length != 0) {
+      apprndData(newData)
+    }
+    else {
+      let h1 = document.createElement("h1");
+      h1.innerHTML = "Not Available in this city"
+      con.append(h1);
+    }
+  }
+
+
+
+
+  function SearchData1(dt) {
+    console.log(dt);
+    let val1 = document.getElementById("bold-space").value;
+    console.log(val1);
    
+    con.innerHTML = null;
+    if(val1!=="Select-Sports"){
+    let newData = dt.filter(function (el) {
+       return val1 == el.sport;
+    })
+    console.log(newData);
+    if (newData.length != 0) {
+      apprndData(newData)
+    }
+    else {
+      let h1 = document.createElement("h1");
+      h1.innerHTML = "Not Available in this city"
+      con.append(h1);
+    }
+    }else if(val1=="Select-Sports"){
+
+      apprndData(dt)
+    }
+   }
 
 
 
 
+  function SearchData2(dt) {
+    console.log(dt);
+    let val1 = document.getElementById("bold-space1").value;
+    console.log(val1);
+   
+    con.innerHTML = null;
+    if(val1!=="Select-Sports"){
+    let newData = dt.filter(function (el) {
+       return val1 == el.level;
+    })
+    console.log(newData);
+    if (newData.length != 0) {
+      apprndData(newData)
+    }
+    else {
+      let h1 = document.createElement("h1");
+      h1.innerHTML = "Not Available in this city"
+      con.append(h1);
+    }
+    }else if(val1=="Select-Sports"){
 
-
-
-
-//Filtering array of objects from the data base End (With Debouncing Feature)
-
-
-
-
-
-
-
-
-// let name=localStorage.getItem("my");
-// // let str1=name;
-// // let str2=str1.toLowerCase()
-console.log(name);
-let MyCity=document.getElementById("con");
-
-
-
-function myNameData(name){
-const nm=name;
-  let API_DATA=`http://localhost:3000/cities?city=${name}`
-let length2;
-showAPI(API_DATA);
-async function showAPI(API_DATA){
-  let result=await fetch(API_DATA);
-  let data=await result.json();
-  console.log(data.length);
-  length2=Math.ceil(data.length/4);
-  console.log(length2)
-  myLength(length2,name)
-}
-
-  showData(page,name);
-
-}
-
-async function showData(page,name){
-  let result=await fetch(`http://localhost:3000/cities?city=${name}&_page=${page}&_limit=4`);
-  let data =await result.json();
-  console.log(data)
-  con.innerHTML=null;
-  apprndData(data)
- }
-
-
-
-
-function myLength(l,name){
-  let paginationData=document.getElementById("pagination");
-paginationData.innerHTML=null;
-
-for(let i=1;i<=l;i++){
-  let btn=document.createElement("button");
-  btn.setAttribute("class","pagination-button");
+      apprndData(dt)
+    }
+   }
   
-  btn.innerText=i;
-  btn.addEventListener("click",()=>{
-    showData(i,name);
-  })
-  paginationData.append(btn);
-}
-}
-
-
-
-
-// async function SearchData(){
-//         //Getting the value again
-//         var search_value = my_value.city;
-
-
-       
-
-//         let response = await fetch("./database/activityData.json");
-//         let data = await response.json();
-//         //console.log(data);
-
-//         //Writing Function for filter data based on search results
-
-//         let filterData = data.filter((el)=>{
-//             let regex = new RegExp(`^${search_value}`, "gi" );
-//             return el.city.match(regex);
-//         })
-
-//         console.log(filterData);
-//         // localStorage.setItem("my",(filterData[0].city));
-       
-//        //apprndData(filterData)
-//     }
-
-
-function SearchData(dt){
-  console.log(dt);
-  let val1=document.getElementById("searchValue").value;
-  con.innerHTML=null;
-  let newData=dt.filter(function(el){
-    return val1==el.sport;
-  })
-  console.log(newData);
- if(newData.length!=0){
-  apprndData(newData)
- }
- else{
-  let h1=document.createElement("h1");
-  h1.innerHTML="Not Available in this city"
-  con.append(h1);
- }
-}
 
 </script>

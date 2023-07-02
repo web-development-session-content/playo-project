@@ -1,6 +1,7 @@
 {
   "cities": [
     {
+      "level":"low",
       "sport":"cricket",
       "city": "hyderabad",
       "name": "Daniel Cricket Academy",
@@ -14,6 +15,7 @@
       "services": "Coaching starts at 5:45 a.m. continues till 8:00 a.m. and in the evening starts at 4:00 p.m. continues till 8:00 p.m.Friendly matches are conducted during the weekends.Fitness program - to make the boys both physically and mentally strong. Special emphasis on fielding, bowling and batting.Giving awareness about international standards and rules.Matches are organized under flood lights with 20-20 format on Saturdays and Sundays for children to get them used to difference match situations/conditions."
     },
     {
+      "level":"high",
       "sport":"cricket",
       "city": "hyderabad",
       "name": "SVM Bowling Alley Gachibowli",
@@ -29,6 +31,7 @@
       "id": 2
     },
     {
+      "level":"high",
       "sport":"badminton",
       "city": "hyderabad",
       "name": "CHETAN ANAND BADMINTON ACADEMY",
@@ -44,6 +47,7 @@
       "id": 3
     },
     {
+      "level":"high",
       "sport":"swimming",
       "city": "hyderabad",
       "name": "PRAXIS SWIMMING",
@@ -59,6 +63,7 @@
       "id": 4
     },
     {
+      "level":"low",
       "sport":"cricket",
       "city": "hyderabad",
       "name": "INSPORTS CRICKET ACADEMY",
@@ -74,6 +79,7 @@
       "id": 5
     },
     {
+      "level":"high",
       "sport":"cricket",
       "city": "hyderabad",
       "name": "ST. JOHNS CRICKET ACADEMY",
@@ -89,6 +95,7 @@
       "id": 6
     },
     {
+      "level":"high",
       "sport":"cricket",
       "city": "hyderabad",
       "name": "RAJU'S CRICKET COACHING ACADEMY",
@@ -104,6 +111,7 @@
       "id": 7
     },
     {
+      "level":"low",
       "sport":"cricket",
       "city": "hyderabad",
       "name": "VVS SPORTS ACADEMY",
@@ -119,6 +127,7 @@
       "id": 8
     },
     {
+      "level":"low",
       "sport":"cricket",
       "city": "delhi",
       "name": "WEST DELHI CRICKET ACADEMY",
@@ -134,6 +143,7 @@
       "id": 9
     },
     {
+      "level":"high",
       "sport":"cricket",
       "city": "delhi",
       "name": "DRONACHARYA CRICKET FOUNDATION",
@@ -149,6 +159,7 @@
       "id": 10
     },
     {
+      "level":"high",
       "sport":"cricket",
       "city": "delhi",
       "name": "SEHWAG CRICKET ACADEMY",
@@ -164,6 +175,7 @@
       "id": 11
     },
     {
+      "level":"low",
       "sport":"cricket",
       "city": "delhi",
       "name": "MADAN LAL CRICKET ACADEMY",
@@ -179,6 +191,7 @@
       "id": 12
     },
     {
+      "level":"high",
       "sport":"cricket",
       "city": "delhi",
       "name": "HARBEER CRICKET ACADEMY",
@@ -194,6 +207,7 @@
       "id": 13
     },
     {
+      "level":"high",
       "sport":"football",
       "city": "delhi",
       "name": "EXTRA TIME FOOTBALL ACADEMY",
@@ -209,6 +223,7 @@
       "id": 14
     },
     {
+      "level":"low",
       "sport":"football",
       "city": "delhi",
       "name": "FCBESCOLA FOOTBALL SCHOOL - WEST DELHI",
@@ -224,6 +239,7 @@
       "id": 15
     },
     {
+      "level":"high",
       "sport":"football",
       "city": "delhi",
       "name": "PHOENIX FOOTBALL ACADEMY",
@@ -239,6 +255,7 @@
       "id": 16
     },
     {
+      "level":"low",
       "sport":"cricket",
       "city": "pune",
       "name": "TWENTY2YARDS CRICKET ACADEMY",
@@ -254,6 +271,7 @@
       "id": 17
     },
     {
+      "level":"high",
       "sport":"cricket",
       "city": "pune",
       "name": "ARYANS CRICKET ACADEMY",
@@ -269,6 +287,7 @@
       "id": 18
     },
     {
+      "level":"low",
       "sport":"cricket",
       "city": "pune",
       "name": "SPORTS GALAXY TILEKAR SPORTS ACADEMY",
@@ -284,6 +303,7 @@
       "id": 19
     },
     {
+      "level":"high",
       "sport":"football",
       "city": "pune",
       "name": "PYC HINDU GYMKHANA",
@@ -299,6 +319,7 @@
       "id": 20
     },
     {
+      "level":"low",
       "sport":"football",
       "city": "pune",
       "name": "SANJAY SPORTS ACADEMY",
@@ -314,6 +335,7 @@
       "id": 21
     },
     {
+      "level":"high",
       "sport":"football",
       "city": "pune",
       "name": "SILVER SPORTS CLUB",
@@ -329,6 +351,7 @@
       "id": 22
     },
     {
+      "level":"high",
       "sport":"cricket",
       "city": "mumbai",
       "name": "SANJEEVANI CRICKET ACADEMY",
@@ -344,6 +367,7 @@
       "id": 23
     },
     {
+      "level":"low",
       "sport":"cricket",
       "city": "mumbai",
       "name": "MUMBAI CRICKET ASSOCIATION INDOOR CRICKET ACADEMY",
@@ -359,6 +383,7 @@
       "id": 24
     },
     {
+      "level":"high",
       "sport":"cricket",
       "city": "mumbai",
       "name": "GLOBAL CRICKET SCHOOL",
@@ -374,6 +399,7 @@
       "id": 25
     },
     {
+      "level":"high",
       "sport":"cricket",
       "city": "mumbai",
       "name": "SHIVAJI PARK GYMKHANA",
@@ -389,6 +415,7 @@
       "id": 26
     },
     {
+      "level":"low",
       "sport":"cricket",
       "city": "mumbai",
       "name": "VIDYA PARADKAR ACADEMY",
@@ -404,6 +431,7 @@
       "id": 27
     },
     {
+      "level":"high",
       "sport":"swimming",
       "city": "mumbai",
       "name": "OCEAN SWIMMING ACADEMY",
@@ -419,6 +447,7 @@
       "id": 28
     },
     {
+      "level":"high",
       "sport":"football",
       "city": "kolkata",
       "name": "FOOTBALL TOURNAMENT",
@@ -434,6 +463,7 @@
       "id": 29
     },
     {
+      "level":"low",
       "sport":"cricket",
       "city": "kolkata",
       "name": "CALCUTTA CRICKET ACADEMY",
