@@ -248,6 +248,29 @@ function first(){
         localStorage.setItem("givedetails", false);
         window.location.href = "venues.html";
     })
+ document.getElementById("save").addEventListener("click",()=>{
+    mydata()
+ })
+
+ document.getElementById("reset").addEventListener("click",()=>{
+    mydataReset()
+ })
+
+function mydata(){
+    window.location.href="activities.html"
+}
+
+function mydataReset(){
+    
+    
+    verticalbox2.innerHTML = profile() 
+     
+       
+    
+   
+    
+    
+}
 
 
 </script>

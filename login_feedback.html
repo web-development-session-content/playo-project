@@ -76,7 +76,14 @@ function first(){
     })
 
 
-
+document.getElementById("feedbtn").addEventListener("click",()=>{
+   let data= document.getElementById("feedtext");
+   data.innerHTML=null;
+   let h1=document.createElement("h1")
+   h1.setAttribute("class","feed")
+   h1.innerHTML="Submit Sucessfull";
+data.append(h1);
+})
 
 
 

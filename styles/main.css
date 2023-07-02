@@ -338,7 +338,13 @@ height: 70px;
 
 
 
-
+.feed{
+    width: 80%;
+    margin: auto;
+    margin-left: 17%;
+    font-size: 70px;
+    margin-top: 20%;
+}
 
 
 
