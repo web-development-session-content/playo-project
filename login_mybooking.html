@@ -30,6 +30,7 @@
 <script type="module">
 
    
+
 import navbarsidebar from "./scripts/sidebarbook.js";
     var body = document.querySelector("#body");
     body.innerHTML = navbarsidebar()
@@ -83,9 +84,19 @@ function first(){
 
 
 
+document.getElementById("upcoming").addEventListener("click",()=>{
 
 
+    location.href="activities.html";
+})
 
+document.getElementById("cancel").addEventListener("click",()=>{
+  let A=  document.getElementById("book")
+  A.innerHTML=null;
+  let h1=document.createElement("h1")
+  h1.innerHTML="Cancel Sucessfully"
+  A.append(h1)
+})
 
 
      

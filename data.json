@@ -1,6 +1,8 @@
 {
   "cities": [
     {
+      "level":"low",
+      "sport":"cricket",
       "city": "hyderabad",
       "name": "Daniel Cricket Academy",
       "location": "hyderabad",
@@ -13,6 +15,8 @@
       "services": "Coaching starts at 5:45 a.m. continues till 8:00 a.m. and in the evening starts at 4:00 p.m. continues till 8:00 p.m.Friendly matches are conducted during the weekends.Fitness program - to make the boys both physically and mentally strong. Special emphasis on fielding, bowling and batting.Giving awareness about international standards and rules.Matches are organized under flood lights with 20-20 format on Saturdays and Sundays for children to get them used to difference match situations/conditions."
     },
     {
+      "level":"high",
+      "sport":"cricket",
       "city": "hyderabad",
       "name": "SVM Bowling Alley Gachibowli",
       "location": "36/A, Sai Tirumala Platinum Building, Old Mumbai Hwy, Telecom Nagar Extension",
@@ -27,6 +31,8 @@
       "id": 2
     },
     {
+      "level":"high",
+      "sport":"badminton",
       "city": "hyderabad",
       "name": "CHETAN ANAND BADMINTON ACADEMY",
       "location": "Madhapur",
@@ -41,6 +47,8 @@
       "id": 3
     },
     {
+      "level":"high",
+      "sport":"swimming",
       "city": "hyderabad",
       "name": "PRAXIS SWIMMING",
       "location": "Narayanguda",
@@ -55,6 +63,8 @@
       "id": 4
     },
     {
+      "level":"low",
+      "sport":"cricket",
       "city": "hyderabad",
       "name": "INSPORTS CRICKET ACADEMY",
       "location": "Banjara Hills",
@@ -69,6 +79,8 @@
       "id": 5
     },
     {
+      "level":"high",
+      "sport":"cricket",
       "city": "hyderabad",
       "name": "ST. JOHNS CRICKET ACADEMY",
       "location": "East Marredpally",
@@ -83,6 +95,8 @@
       "id": 6
     },
     {
+      "level":"high",
+      "sport":"cricket",
       "city": "hyderabad",
       "name": "RAJU'S CRICKET COACHING ACADEMY",
       "location": "Sri Nagar Colony",
@@ -97,6 +111,8 @@
       "id": 7
     },
     {
+      "level":"low",
+      "sport":"cricket",
       "city": "hyderabad",
       "name": "VVS SPORTS ACADEMY",
       "location": "Moinabad",
@@ -111,6 +127,8 @@
       "id": 8
     },
     {
+      "level":"low",
+      "sport":"cricket",
       "city": "delhi",
       "name": "WEST DELHI CRICKET ACADEMY",
       "location": "1A-2 Block, St. Sophia School, Paschim Vihar, New Delhi, Delhi 110063",
@@ -125,6 +143,8 @@
       "id": 9
     },
     {
+      "level":"high",
+      "sport":"cricket",
       "city": "delhi",
       "name": "DRONACHARYA CRICKET FOUNDATION",
       "location": "Near Hanuman Balaji Mandir, Vivek Vihar, New Delhi, Delhi 110092",
@@ -139,6 +159,8 @@
       "id": 10
     },
     {
+      "level":"high",
+      "sport":"cricket",
       "city": "delhi",
       "name": "SEHWAG CRICKET ACADEMY",
       "location": "X-12, Hauz Khas Road, Hauz Khas Main Market, New Delhi, Delhi 110016",
@@ -153,6 +175,8 @@
       "id": 11
     },
     {
+      "level":"low",
+      "sport":"cricket",
       "city": "delhi",
       "name": "MADAN LAL CRICKET ACADEMY",
       "location": "DDA Siri Fort Sports Complex, August Kranti Marg, Khelgaon, Behind Siri Fort Auditorium, New Delhi, Delhi 110049",
@@ -167,6 +191,8 @@
       "id": 12
     },
     {
+      "level":"high",
+      "sport":"cricket",
       "city": "delhi",
       "name": "HARBEER CRICKET ACADEMY",
       "location": "Opp.Japanese Park, Sector 9, Rohini west, Delhi, 110085",
@@ -181,6 +207,8 @@
       "id": 13
     },
     {
+      "level":"high",
+      "sport":"football",
       "city": "delhi",
       "name": "EXTRA TIME FOOTBALL ACADEMY",
       "location": "Vasant Vatika, Opposite DPS Vasant Kunj, New Delhi, Delhi 110070",
@@ -195,6 +223,8 @@
       "id": 14
     },
     {
+      "level":"low",
+      "sport":"football",
       "city": "delhi",
       "name": "FCBESCOLA FOOTBALL SCHOOL - WEST DELHI",
       "location": "Shivaji College Sports Complex iOS Maidan, Shivaji Enclave, Tagore Garden Extension, New Delhi, Delhi 110018",
@@ -209,6 +239,8 @@
       "id": 15
     },
     {
+      "level":"high",
+      "sport":"football",
       "city": "delhi",
       "name": "PHOENIX FOOTBALL ACADEMY",
       "location": "DDA Sports Complex, Muni Maya Ram Jain Marg, Pitampura, Delhi, 110034",
@@ -223,6 +255,8 @@
       "id": 16
     },
     {
+      "level":"low",
+      "sport":"cricket",
       "city": "pune",
       "name": "TWENTY2YARDS CRICKET ACADEMY",
       "location": "r.No. 52/C, Dagade-Patil Nagar, Opp. Pinnacle Brookside, Mumbai-Bangalore Bypass Highway, Bavdhan Khurd, Pune, Maharashtra 411021",
@@ -237,6 +271,8 @@
       "id": 17
     },
     {
+      "level":"high",
+      "sport":"cricket",
       "city": "pune",
       "name": "ARYANS CRICKET ACADEMY",
       "location": "Mulberry Gardens, Opp Laxmi Lawns, Magarpatta City, Hadapsar, Pune, Maharashtra 411028",
@@ -251,6 +287,8 @@
       "id": 18
     },
     {
+      "level":"low",
+      "sport":"cricket",
       "city": "pune",
       "name": "SPORTS GALAXY TILEKAR SPORTS ACADEMY",
       "location": "Mulberry Gardens, Opp Laxmi Lawns, Magarpatta City, Hadapsar, Pune, Maharashtra 411028",
@@ -265,6 +303,8 @@
       "id": 19
     },
     {
+      "level":"high",
+      "sport":"football",
       "city": "pune",
       "name": "PYC HINDU GYMKHANA",
       "location": "CTS No. 766, F.P. No. 244, Bhandarkar Road, Pune, Maharashtra 411004",
@@ -279,6 +319,8 @@
       "id": 20
     },
     {
+      "level":"low",
+      "sport":"football",
       "city": "pune",
       "name": "SANJAY SPORTS ACADEMY",
       "location": "19/1b/1, Near Hotel Rajwada, BanerRoad, Someshwarwadi, Pune, Maharashtra 411008",
@@ -293,6 +335,8 @@
       "id": 21
     },
     {
+      "level":"high",
+      "sport":"football",
       "city": "pune",
       "name": "SILVER SPORTS CLUB",
       "location": "165/1, 166/5 , Near by Mumbai-Bangalore Highway, Behind Vedanta Society ,, Wakad,, Shankar Kalat Nagar, Wakad, Pune, Maharashtra 411057",
@@ -307,6 +351,8 @@
       "id": 22
     },
     {
+      "level":"high",
+      "sport":"cricket",
       "city": "mumbai",
       "name": "SANJEEVANI CRICKET ACADEMY",
       "location": "Bandra East",
@@ -321,6 +367,8 @@
       "id": 23
     },
     {
+      "level":"low",
+      "sport":"cricket",
       "city": "mumbai",
       "name": "MUMBAI CRICKET ASSOCIATION INDOOR CRICKET ACADEMY",
       "location": "Bandra East",
@@ -335,6 +383,8 @@
       "id": 24
     },
     {
+      "level":"high",
+      "sport":"cricket",
       "city": "mumbai",
       "name": "GLOBAL CRICKET SCHOOL",
       "location": "508, Neelkanth, 98, Marine Drive, Churchgate, Mumbai, Maharashtra",
@@ -349,6 +399,8 @@
       "id": 25
     },
     {
+      "level":"high",
+      "sport":"cricket",
       "city": "mumbai",
       "name": "SHIVAJI PARK GYMKHANA",
       "location": "Keluskar Road South, Shivaji Park, Dadar West, Mumbai, Maharashtra",
@@ -363,6 +415,8 @@
       "id": 26
     },
     {
+      "level":"low",
+      "sport":"cricket",
       "city": "mumbai",
       "name": "VIDYA PARADKAR ACADEMY",
       "location": "c/o Vidyadhar Paradkar 264, Bhadkamkar Marg 16, Pannalal Terraces, Mumbai, Maharashtra",
@@ -377,6 +431,8 @@
       "id": 27
     },
     {
+      "level":"high",
+      "sport":"swimming",
       "city": "mumbai",
       "name": "OCEAN SWIMMING ACADEMY",
       "location": "201 G12, Navjeevan Co-Op Soc, Sangharsh Nagar, Chandivali, Near Sakinaka Nahar Amrit Shakti, Andhieri (East), Mumbai, Maharashtra 400072",
@@ -391,6 +447,8 @@
       "id": 28
     },
     {
+      "level":"high",
+      "sport":"football",
       "city": "kolkata",
       "name": "FOOTBALL TOURNAMENT",
       "location": "Indian Statistical Institute, 205 B.T. Road, Kolkata, West Bengal, India",
@@ -405,6 +463,8 @@
       "id": 29
     },
     {
+      "level":"low",
+      "sport":"cricket",
       "city": "kolkata",
       "name": "CALCUTTA CRICKET ACADEMY",
       "location": "Southern Ave, Lake Gardens, Vivekananda Park (est) Ground, Hemanta Mukherjee Sarani, lake Terrace, Ballygunge, Kolkata, West Bengal 700029",

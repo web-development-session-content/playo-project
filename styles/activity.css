@@ -12,7 +12,9 @@ html{
 #dropdownarrow{width: 12px; height: 8px;padding-top: 20px; margin-left: 1%;
 
 }
-#logodiv{margin-left: 10%;}
+#logodiv{
+   margin-left: 10%;margin-bottom: 30px;
+}
 #nav2div{margin-left: 60%;}
 .loginp{margin-left: 10px; line-height: 10px;font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #5c5c5c;}
 #typesearch{width: 100%; padding-left: 10px;}
@@ -27,3 +29,17 @@ margin-right: 20%;}
 #dropdowndiv{ height: 70px; visibility: hidden; 
    width: 100px; text-align: center; margin-top: 40px; border: 1px solid bisque;}
 #citynames>p{padding-left: 10px;}
+#pagination{
+   width: 70%;
+   margin: auto;
+   height: 50px;
+   /* border: 1px dashed rgb(240, 219, 219); */
+   margin-bottom: 20px;
+   margin-left:34%;
+}
+.pagination-button{
+   width: 20%;
+   margin: auto;
+   padding: 15px 60px;
+  
+}

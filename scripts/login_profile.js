@@ -1,5 +1,5 @@
 function profile(){
-    return ` <div id="profile_img"><img src="https://playo-website.gumlet.net/playo_functional/Icons/user_blank.svg" /></div>
+    return ` <div id="profile_img"><img src="https://pixlok.com/wp-content/uploads/2022/02/Profile-Icon-SVG-09856789.png"width=150px /></div>
     
     <div id="inputbox"> <input  class="firstname" type="text" placeholder="First Name*">
      <input  class="lastname" type="text" placeholder="Last Name*" >
@@ -12,7 +12,7 @@ function profile(){
      <input  class="email" type="text" placeholder="Email*">
     
      <div id="buttons">
-     <button id="save" >SAVE</button>
+     <button id="save">SAVE</button>
      <button id="reset">RESET</button>
     </div>
     
