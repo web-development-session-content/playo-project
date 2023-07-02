@@ -201,3 +201,28 @@ display: flex;
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+
+#all-sports{
+  width: 99%;
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 5px 5px;
+}
+
+#block-sport{
+ width: 85%;
+  border: 1px solid;
+ min-height: 410px;
+}
+
+#block-sport img,h2,h4{
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+#block-sport img{
+  width: 85%;
+  min-height: 320px;
+}

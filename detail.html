@@ -29,7 +29,7 @@
 
 
     <!-- container -->
-    <div id="container">
+    <div id="container" style="margin-right: 35px;">
       <!-- <div id="left">
         <img src="./images/DanielsCricketAcademyIMG0 (1).jpg" alt="" id="leftimage" >
         <div>
@@ -82,7 +82,7 @@
         <div id="call"><p>CALL</p></div>
       </div> -->
 
-      <div id="modal_container" ></div>
+      <div id="modal_container" style="margin-right: 35px;"></div>
 
       
 
@@ -91,7 +91,8 @@
 
       
     </div> 
-    <!-- footer -->
+    <div id="ffooter"></div>
+    <!-- footer 
     <div id="infooter">
       <div id="div1">
           <div id="weblogo">
@@ -135,7 +136,7 @@
           <a href="https://twitter.com/playoApp"><p>Twitter</p></a>
           <a href="https://www.instagram.com/playoapp/"><p>Instagram</p></a>
           <a href="https://www.linkedin.com/company/playo"><p>LinkdIn</p></a>
-      </div>
+      </div>-->
     
 </body>
 </html>
@@ -435,3 +436,13 @@ searchLocation();
 
 
 </script>
+<script type="module">
+	import getpopup from "./components/popup.js"
+	import footer from "./components/footer.js"
+	
+	//document.getElementById("show").innerHTML=getpopup();
+
+
+ document.querySelector("#ffooter").innerHTML=footer();
+	
+  </script>
