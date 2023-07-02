@@ -1,6 +1,12 @@
 
 //Login and pop up full functionalities start
 
+import footer from "../components/footer.js"
+
+let container = document.querySelector("#footer");
+container.innerHTML = footer();
+
+
 document.querySelector("#logo").addEventListener("click", ()=>{
     window.location.href = "index.html";
 })
