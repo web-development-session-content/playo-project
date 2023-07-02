@@ -12,6 +12,7 @@ const Debounce = (fun) =>{
 }
 
 
+
 const main = async () =>{
     try{
         let search = document.getElementById("typesearch").value
@@ -25,6 +26,7 @@ const main = async () =>{
     }
 
 }
+
 
 function displayData(data){
     
