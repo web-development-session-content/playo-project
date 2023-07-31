@@ -1,4 +1,3 @@
-# plyo
 # **Project Playo.co**
 
 ## A sports community website cloning project by **Team Eureka**
