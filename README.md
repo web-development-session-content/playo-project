@@ -2,7 +2,8 @@
 
 ## A sports community website cloning project by **Team Eureka**
 
-A one week project for cloning the playo.co website powred by node.js.
+A one week project for cloning the playo.co website powred by node.js.                      
+
 Live at : https://karnking.github.io/playo-project.github.io/
 
 ##Features
