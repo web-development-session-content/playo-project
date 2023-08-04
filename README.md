@@ -6,6 +6,9 @@ A one week project for cloning the playo.co website powred by node.js.
 
 Live at : https://karnking.github.io/playo-project.github.io/
 
+![image](https://github.com/karnking/playo-project.github.io/assets/68837552/0b355fa0-d26f-40f8-9998-c1c4d4f441cf)
+
+
 ##Features
 Debouncing search feature
 Real-time news fetching with Api and search news feature.
