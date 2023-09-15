@@ -1,6 +1,6 @@
 # **Project Playo.co**
 
-## A sports community website cloning project by **Team Eureka**
+## A sports community website cloning project
 
 A one week project for cloning the playo.co website powred by node.js.                      
 
